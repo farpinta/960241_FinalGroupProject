@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Official TikTok App Store Icon (Matches User Screenshot) -->
+  <rect width="100" height="100" rx="22" fill="#000000"/>
+  <path d="M68 31A20 20 0 0 1 52 14V13.5H40V66A12 12 0 1 1 28 54A12 12 0 0 1 34 55.5V42A24 24 0 1 0 52 66V40A32 32 0 0 0 72 46V33A20 20 0 0 1 68 31Z" fill="#25F4EE"/>
+  <path d="M68.5 29A20 20 0 0 1 52.5 12V11.5H40.5V64A12 12 0 1 1 28.5 52A12 12 0 0 1 34.5 53.5V40A24 24 0 1 0 52.5 64V38A32 32 0 0 0 72.5 44V31A20 20 0 0 1 68.5 29Z" fill="#FE2C55"/>
+  <path d="M66 30A20 20 0 0 1 50 13V12.5H38V65A12 12 0 1 1 26 53A12 12 0 0 1 32 54.5V41A24 24 0 1 0 50 65V39A32 32 0 0 0 70 45V32A20 20 0 0 1 66 30Z" fill="#FFFFFF"/>
+</svg>

@@ -1,234 +1,84 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="th" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>สมาชิก คนที่ 4 — CAMT Commerce</title>
-<meta name="description" content="Member 4 — DevOps & Infrastructure Engineer ที่ CAMT Commerce ดูแลระบบคลาวด์ CI/CD และ Observability">
+<title>Farsai Pintakham — CAMT Commerce</title>
 <link rel="stylesheet" href="main.css">
-<style>
-  :root{
-    --m4-green:#10b981;
-    --m4-green-dark:#059669;
-    --m4-green-light:#a7f3d0;
-  }
-
-  /* Hero */
-  .m4-hero{
-    border-bottom:1px solid var(--line);
-    padding:104px 0 88px;
-    position:relative;overflow:hidden;
-    background:linear-gradient(150deg,#fafffb 0%,#f0fdf7 55%,#faf8ff 100%);
-  }
-  .m4-hero::before{
-    content:"";position:absolute;top:-15%;right:-6%;width:560px;height:560px;
-    background:radial-gradient(circle,var(--m4-green-light) 0%,transparent 65%);
-    opacity:.14;pointer-events:none;
-  }
-  .m4-hero-inner{display:grid;grid-template-columns:1fr 300px;gap:56px;align-items:center}
-  @media(max-width:860px){.m4-hero-inner{grid-template-columns:1fr;gap:40px}}
-
-  .m4-badge{
-    display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;
-    letter-spacing:.16em;text-transform:uppercase;color:var(--m4-green-dark);
-    background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.25);
-    padding:7px 14px;margin-bottom:26px;border-radius:2px;
-    opacity:0;animation:popIn .5s cubic-bezier(.34,.1,.64,.99) .08s both;
-  }
-  .m4-badge::before{
-    content:"";width:6px;height:6px;border-radius:50%;background:var(--m4-green);
-    box-shadow:0 0 0 3px rgba(16,185,129,.25);animation:m4pulse 2s ease-in-out infinite;
-  }
-  @keyframes m4pulse{
-    0%,100%{box-shadow:0 0 0 3px rgba(16,185,129,.25)}
-    50%{box-shadow:0 0 0 6px rgba(16,185,129,.08)}
-  }
-
-  .m4-title{
-    font-family:var(--display);font-weight:700;font-size:clamp(42px,7vw,78px);
-    line-height:.98;letter-spacing:-.03em;margin-bottom:20px;
-    opacity:0;animation:popIn .6s cubic-bezier(.34,.1,.64,.99) .15s both;
-  }
-  .m4-title em{
-    font-style:normal;
-    background:linear-gradient(135deg,var(--m4-green-dark) 0%,var(--m4-green) 100%);
-    -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-  }
-  .m4-role{
-    font-family:var(--mono);font-size:14px;color:var(--muted);letter-spacing:.02em;
-    opacity:0;animation:popIn .6s cubic-bezier(.34,.1,.64,.99) .22s both;
-  }
-  .m4-bio{
-    margin-top:24px;font-size:17px;max-width:52ch;color:#2a2a2a;
-    opacity:0;animation:popIn .6s cubic-bezier(.34,.1,.64,.99) .28s both;
-  }
-  .m4-links{margin-top:30px;display:flex;gap:12px;flex-wrap:wrap;
-    opacity:0;animation:popIn .6s cubic-bezier(.34,.1,.64,.99) .34s both;
-  }
-  .m4-chip{
-    font-family:var(--mono);font-size:13px;padding:9px 16px;border:1px solid var(--ink);
-    text-decoration:none;color:var(--ink);transition:.25s cubic-bezier(.34,.1,.64,.99);
-  }
-  .m4-chip:hover{background:var(--m4-green-dark);border-color:var(--m4-green-dark);color:#fff;transform:translateY(-2px)}
-
-  /* Avatar / monogram card */
-  .m4-avatar-wrap{
-    display:flex;flex-direction:column;align-items:center;gap:20px;
-    opacity:0;animation:scaleIn .7s cubic-bezier(.34,.1,.64,.99) .2s both;
-  }
-  .m4-ring{
-    width:180px;height:180px;border-radius:50%;position:relative;
-    display:flex;align-items:center;justify-content:center;
-    background:conic-gradient(from 180deg,var(--m4-green-light),var(--m4-green),var(--m4-green-dark),var(--m4-green-light));
-    animation:m4spin 10s linear infinite;
-  }
-  @keyframes m4spin{to{transform:rotate(360deg)}}
-  .m4-ring::before{
-    content:"";position:absolute;inset:6px;border-radius:50%;background:var(--paper);
-  }
-  .m4-mono{
-    position:relative;font-family:var(--display);font-weight:700;font-size:44px;
-    letter-spacing:-.02em;color:var(--ink);
-  }
-  .m4-status{
-    display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;
-    color:var(--muted);letter-spacing:.05em;
-  }
-  .m4-status .dot{width:7px;height:7px;border-radius:50%;background:var(--m4-green);box-shadow:0 0 0 3px rgba(16,185,129,.2)}
-
-  /* Quick stats */
-  .m4-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);}
-  .m4-stat{padding:22px 20px;border-left:1px solid var(--line);text-align:center}
-  .m4-stat:first-child{border-left:none}
-  .m4-stat b{display:block;font-family:var(--display);font-weight:700;font-size:26px;color:var(--m4-green-dark);letter-spacing:-.02em}
-  .m4-stat span{display:block;font-family:var(--mono);font-size:10.5px;color:var(--muted);margin-top:4px;letter-spacing:.04em;text-transform:uppercase}
-  @media(max-width:860px){.m4-avatar-wrap{margin-top:8px}}
-
-  /* Section heading */
-  .m4-sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:44px}
-  .m4-sec-num{font-family:var(--mono);font-size:13px;color:var(--m4-green-dark);font-weight:700}
-  .m4-sec-title{font-family:var(--display);font-weight:700;font-size:clamp(26px,3.6vw,38px);letter-spacing:-.02em}
-
-  /* Skills — minimal proficiency bars */
-  .m4-skills{display:grid;grid-template-columns:repeat(2,1fr);gap:24px 40px}
-  @media(max-width:640px){.m4-skills{grid-template-columns:1fr}}
-  .m4-skill-row{display:flex;flex-direction:column;gap:8px}
-  .m4-skill-top{display:flex;justify-content:space-between;align-items:baseline}
-  .m4-skill-name{font-family:var(--display);font-weight:600;font-size:15px;letter-spacing:-.01em}
-  .m4-skill-pct{font-family:var(--mono);font-size:12px;color:var(--muted)}
-  .m4-bar{height:5px;background:var(--faint);position:relative;overflow:hidden}
-  .m4-bar i{
-    position:absolute;left:0;top:0;bottom:0;width:0;background:linear-gradient(90deg,var(--m4-green),var(--m4-green-dark));
-    transition:width 1.1s cubic-bezier(.16,.8,.3,1);
-  }
-  .m4-skill-row.in-view .m4-bar i{width:var(--pct)}
-
-  /* Timeline */
-  .m4-timeline{position:relative;padding-left:28px;border-left:1.5px solid var(--faint)}
-  .m4-tl-item{position:relative;padding-bottom:36px}
-  .m4-tl-item:last-child{padding-bottom:0}
-  .m4-tl-item::before{
-    content:"";position:absolute;left:-33.5px;top:4px;width:11px;height:11px;border-radius:50%;
-    background:var(--paper);border:2px solid var(--m4-green);
-  }
-  .m4-tl-year{font-family:var(--mono);font-size:12px;color:var(--m4-green-dark);font-weight:700;letter-spacing:.04em}
-  .m4-tl-title{font-family:var(--display);font-weight:600;font-size:19px;margin-top:6px;letter-spacing:-.01em}
-  .m4-tl-desc{font-size:14.5px;color:#3a3a3a;margin-top:6px;max-width:56ch}
-  .m4-tl-role{font-family:var(--mono);font-size:11.5px;color:var(--muted);margin-top:8px;letter-spacing:.03em;text-transform:uppercase}
-
-  /* Reveal */
-  .m4-reveal{opacity:0;transform:translateY(36px);transition:all .75s cubic-bezier(.34,.1,.64,.99)}
-  .m4-reveal.in-view{opacity:1;transform:translateY(0)}
-</style>
 </head>
 <body>
 
 <header class="topbar">
   <div class="wrap">
-    <a class="brand" href="Index.html">CAMT&nbsp;Commerce</a>
-    <a class="back" href="Index.html">← กลับหน้าหลัก</a>
+    <a class="brand" href="Index.html">
+      CAMT&nbsp;Commerce
+      <span class="brand-badge">// member profile</span>
+    </a>
+    <div class="topbar-right">
+      <a class="back" href="Index.html">← กลับหน้าหลัก</a>
+      <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light mode">
+        <svg id="theme-icon" viewBox="0 0 24 24"></svg>
+        <span id="theme-text">Theme</span>
+      </button>
+    </div>
   </div>
 </header>
 
-<section class="m4-hero">
-  <div class="wrap m4-hero-inner">
-    <div>
-      <div class="m4-badge">Farsai · Frontend &amp; UXUI</div>
-      <h1 class="m4-title">สมาชิก<br><em>คนที่ 4</em></h1>
-      <div class="m4-role">Frontend &amp; IUXUI — ออกแบบและพัฒนาส่วนติดต่อผู้ใช้</div>
-      <p class="m4-bio">รับผิดชอบการออกแบบและพัฒนาส่วนติดต่อผู้ใช้ ระบบ UI/UX และการปรับปรุงประสบการณ์ของผู้ใช้</p>
-      <div class="m4-links">
-        <a class="m4-chip" href="https://farpinta.me/" target="_blank" rel="noopener">Portfolio ↗</a>
-        <a class="m4-chip" href="https://www.linkedin.com/feed/" target="_blank" rel="noopener">LinkedIn ↗</a>
-        <a class="m4-chip" href="mailto:member4@camtcommerce.dev">Email ↗</a>
-      </div>
-    </div>
-    <div class="m4-avatar-wrap">
-      <div class="m4-ring"><span class="m4-mono">M4</span></div>
-      <div class="m4-status"><span class="dot"></span>Systems Online</div>
-      <div class="m4-stats">
-        <div class="m4-stat"><b>99.98%</b><span>Uptime</span></div>
-        <div class="m4-stat"><b>4 min</b><span>MTTR</span></div>
-        <div class="m4-stat"><b>120+</b><span>Deploys/mo</span></div>
-      </div>
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">MEMBER 04 / DEVOPS & INFRASTRUCTURE</div>
+    <h1>Farsai<br>Pintakham</h1>
+    <div class="role">DevOps & Infrastructure — ดูแลโครงสร้างพื้นฐานและการดีพลอย</div>
+    <p class="bio">รับผิดชอบโครงสร้างพื้นฐานบนคลาวด์ ระบบ CI/CD และการมอนิเตอร์ ทำให้ระบบพร้อมรองรับทราฟฟิกช่วงแคมเปญและกู้คืนได้รวดเร็วเมื่อเกิดปัญหา</p>
+    <div class="links">
+      <a class="chip" href="#" target="_blank" rel="noopener">GitHub ↗</a>
+      <a class="chip" href="#" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="chip" href="mailto:member4@camtcommerce.dev">Email ↗</a>
     </div>
   </div>
 </section>
 
 <section class="section m4-reveal">
   <div class="wrap">
-    <div class="m4-sec-head"><span class="m4-sec-num">A</span><span class="m4-sec-title">ทักษะ</span></div>
-    <div class="m4-skills">
-      <div class="m4-skill-row" style="--pct:95%">
-        <div class="m4-skill-top"><span class="m4-skill-name">Figma / Adobe XD</span><span class="m4-skill-pct">95%</span></div>
-        <div class="m4-bar"><i></i></div>
+    <div class="sec-head">
+      <div class="sec-head-left">
+        <span class="sec-num">A</span>
+        <h2 class="sec-title">ทักษะและความเชี่ยวชาญ</h2>
       </div>
-      <div class="m4-skill-row" style="--pct:90%">
-        <div class="m4-skill-top"><span class="m4-skill-name">React / Next.js</span><span class="m4-skill-pct">90%</span></div>
-        <div class="m4-bar"><i></i></div>
-      </div>
-      <div class="m4-skill-row" style="--pct:97%">
-        <div class="m4-skill-top"><span class="m4-skill-name">HTML5 / CSS3 / SCSS</span><span class="m4-skill-pct">97%</span></div>
-        <div class="m4-bar"><i></i></div>
-      </div>
-      <div class="m4-skill-row" style="--pct:88%">
-        <div class="m4-skill-top"><span class="m4-skill-name">Tailwind CSS</span><span class="m4-skill-pct">88%</span></div>
-        <div class="m4-bar"><i></i></div>
-      </div>
-      <div class="m4-skill-row" style="--pct:85%">
-        <div class="m4-skill-top"><span class="m4-skill-name">JavaScript / TypeScript</span><span class="m4-skill-pct">85%</span></div>
-        <div class="m4-bar"><i></i></div>
-      </div>
-      <div class="m4-skill-row" style="--pct:92%">
-        <div class="m4-skill-top"><span class="m4-skill-name">User Research & Wireframing</span><span class="m4-skill-pct">92%</span></div>
-        <div class="m4-bar"><i></i></div>
-      </div>
+    </div>
+    <div class="skills">
+      <span class="skill">Docker / Kubernetes</span>
+      <span class="skill">AWS</span>
+      <span class="skill">Terraform</span>
+      <span class="skill">CI/CD</span>
+      <span class="skill">Prometheus / Grafana</span>
+      <span class="skill">Linux</span>
     </div>
   </div>
 </section>
 
 <section class="section m4-reveal">
   <div class="wrap">
-    <div class="m4-sec-head"><span class="m4-sec-num">B</span><span class="m4-sec-title">ผลงานที่ผ่านมา</span></div>
-    <div class="m4-timeline">
-      <div class="m4-tl-item">
-        <div class="m4-tl-year">2025</div>
-        <div class="m4-tl-title">E-commerce App Redesign</div>
-        <div class="m4-tl-desc">วิจัยผู้ใช้งานและออกแบบ UI ใหม่ทั้งหมดเพื่อเพิ่มยอดขาย (Conversion Rate) ในช่วงแคมเปญใหญ่</div>
-        <div class="m4-tl-role">UX/UI Lead</div>
+    <div class="sec-head">
+      <div class="sec-head-left">
+        <span class="sec-num">B</span>
+        <h2 class="sec-title">ผลงานที่ผ่านมา</h2>
       </div>
-      <div class="m4-tl-item">
-        <div class="m4-tl-year">2024</div>
-        <div class="m4-tl-title">Hospital Management Dashboard</div>
-        <div class="m4-tl-desc">พัฒนาระบบแสดงผลข้อมูลผู้ป่วยด้วย React เพื่อให้แพทย์และพยาบาลใช้งานได้ง่ายและรวดเร็ว</div>
-        <div class="m4-tl-role">Frontend Developer</div>
-      </div>
-      <div class="m4-tl-item">
-        <div class="m4-tl-year">2023</div>
-        <div class="m4-tl-title">Corporate Design System</div>
-        <div class="m4-tl-desc">สร้างระบบ Design System กลางขององค์กร เพื่อให้ทีมดีไซเนอร์และนักพัฒนาทำงานร่วมกันอย่างมีมาตรฐาน</div>
-        <div class="m4-tl-role">UX/UI & Frontend</div>
-      </div>
+    </div>
+    <div class="proj">
+      <div class="py">2025</div>
+      <div><div class="pt">Shopee — Autoscaling Platform</div><div class="pd">ระบบขยายเซิร์ฟเวอร์อัตโนมัติรองรับแคมเปญ 11.11</div></div>
+      <div class="pc">DevOps Lead</div>
+    </div>
+    <div class="proj">
+      <div class="py">2024</div>
+      <div><div class="pt">Big C — CI/CD Pipeline</div><div class="pd">วางระบบดีพลอยอัตโนมัติลดเวลาปล่อยฟีเจอร์</div></div>
+      <div class="pc">Infra Eng</div>
+    </div>
+    <div class="proj">
+      <div class="py">2023</div>
+      <div><div class="pt">Central — Observability Stack</div><div class="pd">ระบบมอนิเตอร์และแจ้งเตือนครอบคลุมทุกบริการ</div></div>
+      <div class="pc">SRE</div>
     </div>
   </div>
 </section>
@@ -236,16 +86,51 @@
 
 <footer class="foot">
   <div class="wrap">
-    <small>© 2026 CAMT Commerce</small>
+    <small>© 2026 CAMT Commerce — Farsai Pintakham</small>
     <a href="Index.html">← กลับไปดูทีมทั้งหมด</a>
   </div>
 </footer>
 
 <script>
-  const m4Observer = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in-view'); });
-  }, { threshold: .15 });
-  document.querySelectorAll('.m4-reveal, .m4-skill-row').forEach(el => m4Observer.observe(el));
+// Theme Switcher Logic
+const themeToggleBtn = document.getElementById('theme-toggle');
+const themeIcon = document.getElementById('theme-icon');
+const themeText = document.getElementById('theme-text');
+
+const sunSvg = `<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>`;
+const moonSvg = `<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>`;
+
+function getInitialTheme() {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) return savedTheme;
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('theme', theme);
+  if (theme === 'dark') {
+    themeIcon.innerHTML = sunSvg;
+    themeIcon.setAttribute('stroke', 'currentColor');
+    themeIcon.setAttribute('stroke-width', '2');
+    themeIcon.setAttribute('fill', 'none');
+    themeText.textContent = 'Light Mode';
+  } else {
+    themeIcon.innerHTML = moonSvg;
+    themeIcon.setAttribute('stroke', 'currentColor');
+    themeIcon.setAttribute('stroke-width', '2');
+    themeIcon.setAttribute('fill', 'none');
+    themeText.textContent = 'Dark Mode';
+  }
+}
+
+let currentTheme = getInitialTheme();
+applyTheme(currentTheme);
+
+themeToggleBtn.addEventListener('click', () => {
+  currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+  applyTheme(currentTheme);
+});
 </script>
 
 </body>

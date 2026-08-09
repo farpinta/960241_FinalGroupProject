@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Official Lotus's App Store Icon -->
+  <rect width="100" height="100" rx="22" fill="#00A651"/>
+  <path d="M50 20C32.54 20 18 34.54 18 52C18 69.46 32.54 84 50 84C67.46 84 82 69.46 82 52C82 34.54 67.46 20 50 20ZM36 71V33H45V62H63V71H36Z" fill="#FFFFFF"/>
+  <circle cx="65" cy="35" r="9" fill="#FFDD00"/>
+</svg>

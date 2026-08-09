@@ -1,75 +1,337 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="th" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>สมาชิก คนที่ 2 — CAMT Commerce</title>
-<link rel="stylesheet" href="../main.css">
+<meta name="description" content="Thitirat Sirisawad — UX/UI Designer & Product Designer ที่ CAMT Commerce เชี่ยวชาญด้าน Design System, User Research และ Interactive Prototyping">
+<title>Thitirat Sirisawad — UX/UI Designer · CAMT Commerce</title>
+<link rel="stylesheet" href="main.css">
 </head>
 <body>
 
+<!-- Header Navigation -->
 <header class="topbar">
   <div class="wrap">
-    <a class="brand" href="../index.html">CAMT&nbsp;Commerce</a>
-    <a class="back" href="../index.html">← กลับหน้าหลัก</a>
+    <a class="brand" href="Index.html">
+      CAMT&nbsp;Commerce
+      <span class="brand-badge">// member profile</span>
+    </a>
+    <div class="topbar-right">
+      <a class="back" href="Index.html">← กลับหน้าหลัก</a>
+      <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light mode">
+        <svg id="theme-icon" viewBox="0 0 24 24"></svg>
+        <span id="theme-text">Theme</span>
+      </button>
+    </div>
   </div>
 </header>
 
+<!-- Hero Section -->
 <section class="hero">
   <div class="wrap">
-    <div class="idx">Member 02 / Frontend Engineer</div>
-    <h1>สมาชิก<br>คนที่ 2</h1>
-    <div class="role">Frontend Engineer — พัฒนาหน้าร้านและประสบการณ์ผู้ใช้</div>
-    <p class="bio">รับผิดชอบส่วนหน้าร้านออนไลน์ ตั้งแต่หน้าแสดงสินค้า ตะกร้า ไปจนถึงขั้นตอนชำระเงิน เน้นความเร็วในการโหลดและประสบการณ์ที่ลื่นไหลบนทุกอุปกรณ์</p>
-    <div class="links">
-      <a class="chip" href="#" target="_blank" rel="noopener">GitHub ↗</a>
-      <a class="chip" href="#" target="_blank" rel="noopener">LinkedIn ↗</a>
-      <a class="chip" href="mailto:member2@camtcommerce.dev">Email ↗</a>
+    <div class="hero-container">
+      <div class="hero-left-box">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          MEMBER 02 / UX/UI &amp; PRODUCT DESIGNER
+        </div>
+        
+        <h1>
+          Thitirat<br>
+          <em>Sirisawad</em>
+        </h1>
+        
+        <div class="role" style="font-family:var(--mono); font-size:16px; color:var(--accent-purple); font-weight:600; margin:16px 0 12px;">
+          Product &amp; UX/UI Designer — ออกแบบประสบการณ์ผู้ใช้และอินเทอร์เฟซระดับองค์กร
+        </div>
+        
+        <p class="lead" style="font-size:17px;">
+          รับผิดชอบการออกแบบประสบการณ์ผู้ใช้ (UX) และส่วนติดต่อผู้ใช้งาน (UI) ครบวงจร ตั้งแต่ User Research, Wireframing, Prototyping ไปจนถึงการวาง Design System และการส่งมอบ Specs ให้ทีม Frontend เพื่อให้ได้แพลตฟอร์มที่สวยงาม ทันสมัย และใช้งานง่ายไร้รอยต่อ
+        </p>
+        
+        <!-- Social / Contact Links -->
+        <div class="links">
+          <a class="chip" href="https://github.com/ddeeww001" target="_blank" rel="noopener">GitHub</a>
+          <a class="chip" href="mailto:dewthitirat@gmail.com">Email</a>
+          <a class="chip" href="https://my-web-portfolio-yxac.vercel.app/" target="_blank" rel="noopener">Portfolio</a>
+        </div>
+
+        <!-- Profile Highlights Stats -->
+        <div class="profile-stats-grid">
+          <div class="profile-stat-card">
+            <div class="num">5+ ปี</div>
+            <div class="lbl">ประสบการณ์ UX/UI Design</div>
+          </div>
+          <div class="profile-stat-card">
+            <div class="num">40+</div>
+            <div class="lbl">Wireframes &amp; Prototypes</div>
+          </div>
+          <div class="profile-stat-card">
+            <div class="num">100%</div>
+            <div class="lbl">Design System Standard</div>
+          </div>
+          <div class="profile-stat-card">
+            <div class="num">15M+</div>
+            <div class="lbl">ผู้ใช้งานที่ได้รับประสบการณ์ใหม่</div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section">
+<!-- Section A: Skills & Expertise -->
+<section class="section reveal">
   <div class="wrap">
-    <div class="sec-title"><span class="n">A</span> ทักษะ</div>
-    <div class="skills">
-      <span class="skill">React / Next.js</span>
-      <span class="skill">TypeScript</span>
-      <span class="skill">Tailwind CSS</span>
-      <span class="skill">Accessibility</span>
-      <span class="skill">Web Performance</span>
-      <span class="skill">Figma</span>
+    <div class="sec-head">
+      <div class="sec-head-left">
+        <span class="sec-num">01</span>
+        <h2 class="sec-title">ทักษะและความเชี่ยวชาญหลัก</h2>
+      </div>
+      <p class="sec-sub">ครอบคลุมทุกมิติของการออกแบบประสบการณ์และสถาปัตยกรรมอินเทอร์เฟซผู้ใช้</p>
+    </div>
+
+    <div class="skills-grid">
+      <!-- Skill 1 -->
+      <div class="skill-card">
+        <span class="skill-card-code">SK / 01</span>
+        <h3 class="skill-card-title">User Research &amp; Usability Testing</h3>
+        <p class="skill-card-desc">ทำวิจัยพฤติกรรมผู้ใช้ สัมภาษณ์เชิงลึก และจัดทำ Usability Testing เพื่อค้นหา Pain Points นำมาปรับปรุง Conversion Rate และเพิ่ม Satisfaction Score ให้สูงขึ้น</p>
+        <div class="skill-card-tags">
+          <span class="tag-chip">User Research</span>
+          <span class="tag-chip">Usability Test</span>
+          <span class="tag-chip">User Persona</span>
+          <span class="tag-chip">Journey Map</span>
+        </div>
+      </div>
+
+      <!-- Skill 2 -->
+      <div class="skill-card">
+        <span class="skill-card-code">SK / 02</span>
+        <h3 class="skill-card-title">Design System Architecture</h3>
+        <p class="skill-card-desc">วางระบบดีไซน์ซิสเต็มและ UI Component Library แบบ Atomic Design พร้อมคู่มือ Handoff ช่วยเพิ่มความเร็วการทำงานของทีม Dev และคุมเอกลักษณ์ visual สอดคล้องกัน</p>
+        <div class="skill-card-tags">
+          <span class="tag-chip">Design System</span>
+          <span class="tag-chip">Figma Tokens</span>
+          <span class="tag-chip">Component Library</span>
+          <span class="tag-chip">UI Guidelines</span>
+        </div>
+      </div>
+
+      <!-- Skill 3 -->
+      <div class="skill-card">
+        <span class="skill-card-code">SK / 03</span>
+        <h3 class="skill-card-title">Wireframing &amp; Interactive Prototyping</h3>
+        <p class="skill-card-desc">สร้างโครงร่าง Wireframe ความละเอียดสูง และ Interactive Prototype ที่มีแอนิเมชันเสมือนจริงสำหรับทดสอบขั้นตอนก่อนเข้าสู่กระบวนการเขียนโค้ด frontend</p>
+        <div class="skill-card-tags">
+          <span class="tag-chip">Hi-Fi Wireframes</span>
+          <span class="tag-chip">Prototyping</span>
+          <span class="tag-chip">Micro-interactions</span>
+          <span class="tag-chip">Figma</span>
+        </div>
+      </div>
+
+      <!-- Skill 4 -->
+      <div class="skill-card">
+        <span class="skill-card-code">SK / 04</span>
+        <h3 class="skill-card-title">Information Architecture &amp; User Flow</h3>
+        <p class="skill-card-desc">จัดระเบียบสถาปัตยกรรมข้อมูล ลำดับขั้นตอนการทำงาน (User Flow) และ Navigation Structure ของแพลตฟอร์มซับซ้อนให้เข้าใจง่าย ไร้ความสับสน</p>
+        <div class="skill-card-tags">
+          <span class="tag-chip">Information Arch</span>
+          <span class="tag-chip">User Flow</span>
+          <span class="tag-chip">Sitemap</span>
+          <span class="tag-chip">Navigation UX</span>
+        </div>
+      </div>
+
+      <!-- Skill 5 -->
+      <div class="skill-card">
+        <span class="skill-card-code">SK / 05</span>
+        <h3 class="skill-card-title">E-Commerce Conversion UX</h3>
+        <p class="skill-card-desc">ออกแบบขั้นตอน Checkout Flow, Cart Drawer, Search Filter และ Product Detail Page ให้กระชับ ลดความลังเลของผู้ซื้อ และส่งเสริมยอดสั่งซื้อแบบก้าวกระโดด</p>
+        <div class="skill-card-tags">
+          <span class="tag-chip">Checkout UX</span>
+          <span class="tag-chip">Cart Flow</span>
+          <span class="tag-chip">CRO</span>
+          <span class="tag-chip">A/B Testing</span>
+        </div>
+      </div>
+
+      <!-- Skill 6 -->
+      <div class="skill-card">
+        <span class="skill-card-code">SK / 06</span>
+        <h3 class="skill-card-title">Design-to-Code Handoff &amp; Accessibility</h3>
+        <p class="skill-card-desc">ตรวจสอบความเข้ากันได้ของการออกแบบกับ HTML/CSS, WCAG 2.1 Color Contrast Standards, Responsive Design บนทุกอุปกรณ์ และรองรับ Screen Readers</p>
+        <div class="skill-card-tags">
+          <span class="tag-chip">Design Handoff</span>
+          <span class="tag-chip">WCAG 2.1</span>
+          <span class="tag-chip">Responsive UI</span>
+          <span class="tag-chip">Dev Spec</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section">
+<!-- Section B: Featured Work & Case Studies -->
+<section class="section reveal">
   <div class="wrap">
-    <div class="sec-title"><span class="n">B</span> ผลงานที่ผ่านมา</div>
-        <div class="proj">
-      <div class="py">2025</div>
-      <div><div class="pt">Shopee — Storefront Redesign</div><div class="pd">ปรับปรุงหน้าร้านให้โหลดเร็วขึ้นและรองรับมือถือเต็มรูปแบบ</div></div>
-      <div class="pc">Frontend Lead</div>
+    <div class="sec-head">
+      <div class="sec-head-left">
+        <span class="sec-num">02</span>
+        <h2 class="sec-title">ผลงานที่ผ่านมาและเคสศึกษา</h2>
+      </div>
+      <p class="sec-sub">ประสบการณ์ออกแบบระบบหน้าร้านและผลิตภัณฑ์ดิจิทัลระดับล้านผู้ใช้</p>
     </div>
-    <div class="proj">
-      <div class="py">2024</div>
-      <div><div class="pt">Big C — Cart & Checkout UI</div><div class="pd">ออกแบบและพัฒนา flow ตะกร้าและชำระเงินใหม่ทั้งหมด</div></div>
-      <div class="pc">UI Engineer</div>
+
+    <div class="timeline">
+      <!-- Project 1 -->
+      <div class="tl-item">
+        <div class="tl-year">2025</div>
+        <div class="tl-body">
+          <div class="tl-client">Shopee Thailand</div>
+          <h3 class="tl-project">Design System 2.0 &amp; Mobile Checkout UX Redesign</h3>
+          <p class="tl-desc">นำทีมออกแบบ Design System 2.0 ปรับปรุงโครงสร้างขั้นตอนการชำระเงิน (Checkout Flow) บนอุปกรณ์เคลื่อนที่ เพิ่ม Conversion Rate ขึ้น 25% และลดขั้นตอนทำรายการซื้อเหลือเพียง 3 ขั้นตอน</p>
+          <div class="tl-footer">
+            <span class="role-badge">Lead UX Designer</span>
+            <span class="tag-chip">Figma</span>
+            <span class="tag-chip">Design System</span>
+            <span class="tag-chip">Mobile Checkout UX</span>
+            <span class="tag-chip">A/B Testing</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="tl-item">
+        <div class="tl-year">2024</div>
+        <div class="tl-body">
+          <div class="tl-client">Lotus's</div>
+          <h3 class="tl-project">Super App Shopping &amp; E-Wallet UX Integration</h3>
+          <p class="tl-desc">ออกแบบอินเทอร์เฟซระบบช้อปปิ้งและกระเป๋าเงินอิเล็กทรอนิกส์ E-Wallet ใหม่อ่านง่าย สะอาดตา เพิ่มคะแนนความพึงพอใจการใช้งาน (CSAT Score) สูงถึง 94% ภายใน 3 เดือนหลังเปิดตัว</p>
+          <div class="tl-footer">
+            <span class="role-badge">Senior Product Designer</span>
+            <span class="tag-chip">Mobile App UX</span>
+            <span class="tag-chip">E-Wallet Integration</span>
+            <span class="tag-chip">Usability Testing</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="tl-item">
+        <div class="tl-year">2024</div>
+        <div class="tl-body">
+          <div class="tl-client">Central Online</div>
+          <h3 class="tl-project">Omni-Channel Luxury Catalog &amp; Visual Identity</h3>
+          <p class="tl-desc">วางสถาปัตยกรรมข้อมูล และแนวทางการออกแบบ Visual Design Guidelines สำหรับสินค้าแบรนด์เนมและเครื่องแต่งกาย พร้อมระบบแสดงสถานะสินค้าหลายสาขา</p>
+          <div class="tl-footer">
+            <span class="role-badge">UX/UI Designer</span>
+            <span class="tag-chip">Information Arch</span>
+            <span class="tag-chip">Visual Guidelines</span>
+            <span class="tag-chip">Luxury E-Commerce</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="tl-item">
+        <div class="tl-year">2023</div>
+        <div class="tl-body">
+          <div class="tl-client">Big C Supercenter</div>
+          <h3 class="tl-project">Cart Drawer &amp; Express 30-Min Delivery Flow</h3>
+          <p class="tl-desc">ออกแบบการทำงานตะกร้าสินค้าแบบป๊อปอัพและระบบจัดส่งด่วนภายใน 30 นาที ทดสอบการใช้งานกับกลุ่มตัวอย่างผู้ใช้จริงกว่า 50 ราย ก่อนเปิดใช้งานทั่วประเทศ</p>
+          <div class="tl-footer">
+            <span class="role-badge">UI Engineer / Designer</span>
+            <span class="tag-chip">Cart Flow</span>
+            <span class="tag-chip">Usability Research</span>
+            <span class="tag-chip">Micro-interactions</span>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <div class="proj">
-      <div class="py">2023</div>
-      <div><div class="pt">Central — Product Catalog</div><div class="pd">หน้าแคตตาล็อกสินค้าพร้อมระบบค้นหาและกรองแบบเรียลไทม์</div></div>
-      <div class="pc">Frontend Dev</div>
-    </div>
-</div>
+  </div>
 </section>
 
+<!-- Section C: Portfolio CTA -->
+<section class="section reveal">
+  <div class="wrap">
+    <div class="portfolio-cta-card">
+      <div class="eyebrow" style="margin-bottom:16px;">PORTFOLIO SHOWCASE</div>
+      <h2>สำรวจ <em>พอร์ตโฟลิโอฉบับเต็ม</em></h2>
+      <p>เข้าชมรายละเอียดผลงานการออกแบบ UI/UX, Design System Components, Figma Interactive Prototypes และเคสสตัดีเชิงลึกเพิ่มเติมได้ที่ลิงก์พอร์ตโฟลิโอ</p>
+      
+      <a class="btn solid" href="https://my-web-portfolio-yxac.vercel.app" target="_blank" rel="noopener" style="margin-top:8px;">
+        ดูโปรไฟล์เพิ่มเติม
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
 <footer class="foot">
   <div class="wrap">
-    <small>© 2026 CAMT Commerce</small>
-    <a href="../index.html">← กลับไปดูทีมทั้งหมด</a>
+    <div class="brand">CAMT Commerce</div>
+    <small>© 2026 CAMT Commerce — Thitirat Sirisawad · Member 02 UX/UI Designer</small>
+    <a href="Index.html">← กลับไปดูทีมทั้งหมด</a>
   </div>
 </footer>
+
+<script>
+// Theme Switcher Logic
+const themeToggleBtn = document.getElementById('theme-toggle');
+const themeIcon = document.getElementById('theme-icon');
+const themeText = document.getElementById('theme-text');
+
+const sunSvg = `<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>`;
+const moonSvg = `<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>`;
+
+function getInitialTheme() {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) return savedTheme;
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('theme', theme);
+  if (theme === 'dark') {
+    themeIcon.innerHTML = sunSvg;
+    themeIcon.setAttribute('stroke', 'currentColor');
+    themeIcon.setAttribute('stroke-width', '2');
+    themeIcon.setAttribute('fill', 'none');
+    themeText.textContent = 'Light Mode';
+  } else {
+    themeIcon.innerHTML = moonSvg;
+    themeIcon.setAttribute('stroke', 'currentColor');
+    themeIcon.setAttribute('stroke-width', '2');
+    themeIcon.setAttribute('fill', 'none');
+    themeText.textContent = 'Dark Mode';
+  }
+}
+
+let currentTheme = getInitialTheme();
+applyTheme(currentTheme);
+
+themeToggleBtn.addEventListener('click', () => {
+  currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+  applyTheme(currentTheme);
+});
+
+// Scroll Parallax Reveals (Intersection Observer)
+const observerOptions = {threshold: 0.1, rootMargin: '0px 0px -40px 0px'};
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in-view');
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
