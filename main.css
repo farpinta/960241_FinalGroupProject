@@ -586,15 +586,15 @@ body{
 .section{border-bottom:1px solid var(--line);padding:120px 0;transition:var(--theme-transition)}
 .section.reveal{
   opacity:0;
-  transform:translateY(48px) scale(0.96);
-  filter:blur(8px);
-  transition:opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1), filter 0.9s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change:transform, opacity, filter;
+  transform:translate3d(0, 36px, 0);
+  transition:opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change:transform, opacity;
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
 }
 .section.reveal.in-view{
   opacity:1;
-  transform:translateY(0) scale(1);
-  filter:blur(0px);
+  transform:translate3d(0, 0, 0);
 }
 
 .sec-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:64px}
@@ -631,6 +631,9 @@ body{
   width:max-content;
   animation:marqueeCards 36s linear infinite;
   will-change:transform;
+  transform:translate3d(0, 0, 0);
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
 }
 
 .clients-marquee-track:hover{
@@ -638,8 +641,8 @@ body{
 }
 
 @keyframes marqueeCards{
-  0%{transform:translateX(0)}
-  100%{transform:translateX(-50%)}
+  0%{transform:translate3d(0, 0, 0)}
+  100%{transform:translate3d(-50%, 0, 0)}
 }
 
 .client-card{

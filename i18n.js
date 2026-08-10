@@ -349,13 +349,20 @@ document.addEventListener('DOMContentLoaded', () => {
     topbar.appendChild(progressBar);
   }
 
+  let ticking = false;
   window.addEventListener('scroll', () => {
-    const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
-    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
-    const progressBar = document.getElementById('scroll-progress');
-    if (progressBar) {
-      progressBar.style.width = scrolled + '%';
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+        const progressBar = document.getElementById('scroll-progress');
+        if (progressBar) {
+          progressBar.style.width = scrolled + '%';
+        }
+        ticking = false;
+      });
+      ticking = true;
     }
   }, { passive: true });
 
