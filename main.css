@@ -107,6 +107,17 @@
   --theme-transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
 }
 
+/* Language-Specific Formal Typography Rules */
+:root[lang="th"], [lang="th"] {
+  --display: 'Prompt', 'IBM Plex Sans Thai', sans-serif;
+  --body: 'IBM Plex Sans Thai', 'Prompt', sans-serif;
+}
+
+:root[lang="en"], [lang="en"] {
+  --display: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
 /* ==========================================================================
    Light Theme Soft Purple Glass Variant
    ========================================================================== */
@@ -216,6 +227,17 @@ body{
   backdrop-filter:blur(24px);
   -webkit-backdrop-filter:blur(24px);
   transition:var(--theme-transition);
+}
+.scroll-progress-bar{
+  position:absolute;
+  left:0;
+  bottom:0;
+  height:2.5px;
+  width:0%;
+  background:var(--accent-gradient);
+  box-shadow:0 0 12px var(--accent-glow-strong);
+  z-index:101;
+  transition:width .15s ease-out;
 }
 .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:80px}
 
@@ -405,6 +427,8 @@ body{
   font-family:var(--display);font-weight:700;font-size:clamp(32px,5vw,58px);
   line-height:1.12;letter-spacing:-.02em;
   color:var(--ink);
+  word-break:keep-all;
+  overflow-wrap:break-word;
 }
 .hero h1 em{
   font-style:normal;display:inline-block;
@@ -568,20 +592,21 @@ body{
 /* ==========================================================================
    Section Layouts
    ========================================================================== */
-.section{border-bottom:1px solid var(--line);padding:96px 0;transition:var(--theme-transition)}
+.section{border-bottom:1px solid var(--line);padding:120px 0;transition:var(--theme-transition)}
 .section.reveal{
   opacity:0;
-  transform:translateY(40px) scale(0.98);
-  filter:blur(6px);
-  transition:opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), filter 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  transform:translate3d(0, 36px, 0);
+  transition:opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change:transform, opacity;
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
 }
 .section.reveal.in-view{
   opacity:1;
-  transform:translateY(0) scale(1);
-  filter:blur(0px);
+  transform:translate3d(0, 0, 0);
 }
 
-.sec-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;margin-bottom:52px}
+.sec-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:64px}
 .sec-head-left{display:flex;align-items:baseline;gap:18px}
 .sec-num{
   font-family:var(--mono);font-size:13px;color:var(--accent-purple);
@@ -615,6 +640,9 @@ body{
   width:max-content;
   animation:marqueeCards 36s linear infinite;
   will-change:transform;
+  transform:translate3d(0, 0, 0);
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
 }
 
 .clients-marquee-track:hover{
@@ -622,8 +650,8 @@ body{
 }
 
 @keyframes marqueeCards{
-  0%{transform:translateX(0)}
-  100%{transform:translateX(-50%)}
+  0%{transform:translate3d(0, 0, 0)}
+  100%{transform:translate3d(-50%, 0, 0)}
 }
 
 .client-card{
