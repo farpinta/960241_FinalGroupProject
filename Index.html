@@ -15,18 +15,28 @@
   <div class="wrap">
     <a class="brand" href="Index.html">
       CAMT&nbsp;Commerce
-      <span class="brand-badge">E-COMMERCE SYSTEMS</span>
+      <span class="brand-badge" data-i18n="nav.brandBadge">E-COMMERCE SYSTEMS</span>
     </a>
     
     <div class="topbar-right">
       <nav class="nav">
-        <a href="#hero">HOME</a>
-        <a href="#services">SERVICES</a>
-        <a href="#stats">STATS</a>
-        <a href="#team">TEAM</a>
-        <a href="#work">ดูผลงาน</a>
-        <a href="#contact">คุยกับเรา</a>
+        <a href="#hero" data-i18n="nav.home">HOME</a>
+        <a href="#services" data-i18n="nav.services">SERVICES</a>
+        <a href="#stats" data-i18n="nav.stats">STATS</a>
+        <a href="#team" data-i18n="nav.team">TEAM</a>
+        <a href="#work" data-i18n="nav.work">ดูผลงาน</a>
+        <a href="#contact" data-i18n="nav.contact">คุยกับเรา</a>
       </nav>
+
+      <!-- Language Switcher Button -->
+      <button id="lang-toggle" class="lang-toggle-btn" aria-label="Toggle language">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        <span id="lang-text">TH / EN</span>
+      </button>
 
       <!-- Theme Switcher Button -->
       <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light mode">
@@ -37,41 +47,35 @@
   </div>
 </header>
 
-<!-- Hero Section (Clean Minimalist Typography Layout - Image & Background Grid/Watermark Removed) -->
+<!-- Hero Section -->
 <section class="hero" id="hero">
   <!-- Vertical Left Year Metadata -->
-  <div class="hero-vertical-meta">2026 // SYSTEM ARCHITECTS</div>
+  <div class="hero-vertical-meta" data-i18n="hero.meta">2026 // SYSTEM ARCHITECTS</div>
 
   <div class="wrap" style="width:100%; position:relative">
     <div class="hero-container">
       
       <!-- Hero Left Text Content -->
       <div class="hero-left-box">
-        <div class="eyebrow">
+        <div class="eyebrow" data-i18n="hero.eyebrow">
           <span class="eyebrow-dot"></span>
           ABOUT US / E-COMMERCE EXPERTS
         </div>
         
         <!-- Headline -->
-        <h1>
-          <span class="split-word"><span class="split-inner">เราสร้าง</span></span>
-          <br>
-          <em>
-            <span class="split-word"><span class="split-inner">ระบบ</span></span>
-            <span class="split-word"><span class="split-inner">E-commerce</span></span>
-          </em>
-          <br>
-          <span class="split-word"><span class="split-inner">ที่รองรับการเติบโต</span></span>
-          <span class="split-word"><span class="split-inner">ระดับล้านผู้ใช้®</span></span>
+        <h1 data-i18n="hero.h1">
+          เราสร้าง<br>
+          <em>ระบบ E-commerce</em><br>
+          ที่รองรับการเติบโตระดับล้านผู้ใช้®
         </h1>
         
-        <p class="lead">วิศวกรซอฟต์แวร์ที่ออกแบบ พัฒนา และวางสถาปัตยกรรมแพลตฟอร์มค้าขายออนไลน์ให้แบรนด์ชั้นนำ ตั้งแต่ Checkout Gateway ไปจนถึงระบบคลังสินค้าแบบ Real-time</p>
+        <p class="lead" data-i18n="hero.lead">วิศวกรซอฟต์แวร์ที่ออกแบบ พัฒนา และวางสถาปัตยกรรมแพลตฟอร์มค้าขายออนไลน์ให้แบรนด์ชั้นนำ ตั้งแต่ Checkout Gateway ไปจนถึงระบบคลังสินค้าแบบ Real-time</p>
         
         <div class="hero-actions">
-          <a class="btn solid" href="#work">
+          <a class="btn solid" href="#work" data-i18n="hero.btnWork">
             ดูพอร์ตผลงานลูกค้า
           </a>
-          <a class="btn ghost" href="#contact">ปรึกษาเราฟรี</a>
+          <a class="btn ghost" href="#contact" data-i18n="hero.btnContact">ปรึกษาเราฟรี</a>
         </div>
       </div>
 
@@ -82,31 +86,31 @@
 <!-- Infinite Ticker Banner -->
 <div class="ticker">
   <div class="ticker-track">
-    <span><span class="badge-dot"></span><b>SHOPEE</b> — ระบบตะกร้า &amp; High-Volume Checkout</span>
-    <span><span class="badge-dot"></span><b>LAZADA</b> — Flash Sale Engine &amp; SKU Catalog</span>
-    <span><span class="badge-dot"></span><b>TIKTOK SHOP</b> — Live Stream Commerce API</span>
-    <span><span class="badge-dot"></span><b>CENTRAL ONLINE</b> — Omni-channel Luxury Retail</span>
-    <span><span class="badge-dot"></span><b>LOTUS'S</b> — Smart Member Loyalty Engine</span>
+    <span><span class="badge-dot"></span><b>SHOPEE</b> — High-Volume Checkout</span>
+    <span><span class="badge-dot"></span><b>LAZADA</b> — Flash Sale Engine</span>
+    <span><span class="badge-dot"></span><b>TIKTOK SHOP</b> — Live Stream API</span>
+    <span><span class="badge-dot"></span><b>CENTRAL ONLINE</b> — Omni-channel Luxury</span>
+    <span><span class="badge-dot"></span><b>LOTUS'S</b> — Smart Loyalty Engine</span>
     <span><span class="badge-dot"></span><b>LINE SHOPPING</b> — Chat-to-Pay Gateway</span>
     <span><span class="badge-dot"></span><b>GRABMART</b> — Quick Commerce &amp; Dispatch</span>
-    <span><span class="badge-dot"></span><b>AGODA</b> — Multi-Currency Payment Engine</span>
+    <span><span class="badge-dot"></span><b>AGODA</b> — Multi-Currency Engine</span>
     <!-- Repeat ticker loop -->
-    <span><span class="badge-dot"></span><b>SHOPEE</b> — ระบบตะกร้า &amp; High-Volume Checkout</span>
-    <span><span class="badge-dot"></span><b>LAZADA</b> — Flash Sale Engine &amp; SKU Catalog</span>
-    <span><span class="badge-dot"></span><b>TIKTOK SHOP</b> — Live Stream Commerce API</span>
-    <span><span class="badge-dot"></span><b>CENTRAL ONLINE</b> — Omni-channel Luxury Retail</span>
+    <span><span class="badge-dot"></span><b>SHOPEE</b> — High-Volume Checkout</span>
+    <span><span class="badge-dot"></span><b>LAZADA</b> — Flash Sale Engine</span>
+    <span><span class="badge-dot"></span><b>TIKTOK SHOP</b> — Live Stream API</span>
+    <span><span class="badge-dot"></span><b>CENTRAL ONLINE</b> — Omni-channel Luxury</span>
   </div>
 </div>
 
-<!-- eCommerce Clients Section (Authentic Official App Logos in Full Color) -->
+<!-- eCommerce Clients Section -->
 <section class="section reveal" id="work">
   <div class="wrap">
     <div class="sec-head">
       <div class="sec-head-left">
         <span class="sec-num">01</span>
-        <h2 class="sec-title">ลูกค้า E-commerce ที่ไว้วางใจเรา</h2>
+        <h2 class="sec-title" data-i18n="clients.title">ลูกค้า E-commerce ที่ไว้วางใจเรา</h2>
       </div>
-      <p class="sec-sub">ระบบเบื้องหลังของแพลตฟอร์มระดับประเทศที่ประมวลผลคำสั่งซื้อนับล้านรายการทุกวัน</p>
+      <p class="sec-sub" data-i18n="clients.sub">ระบบเบื้องหลังของแพลตฟอร์มระดับประเทศที่ประมวลผลคำสั่งซื้อนับล้านรายการทุกวัน</p>
     </div>
   </div>
 
@@ -123,7 +127,7 @@
           <img src="images/brand-logos/shopee.png" alt="Shopee App Icon" width="64" height="64">
         </div>
         <div class="card-content">
-          <h3>Shopee ประมวลผล 15M+ Order/Day ด้วย High-Volume Checkout Gateway</h3>
+          <h3 data-i18n="clients.shopee">Shopee ประมวลผล 15M+ Order/Day ด้วย High-Volume Checkout Gateway</h3>
         </div>
       </div>
 
@@ -136,7 +140,7 @@
           <img src="images/brand-logos/lazada.png" alt="Lazada App Icon" width="64" height="64">
         </div>
         <div class="card-content">
-          <h3>Lazada จัดการ 10M+ Active SKUs ด้วย Flash Sale Traffic Governor</h3>
+          <h3 data-i18n="clients.lazada">Lazada จัดการ 10M+ Active SKUs ด้วย Flash Sale Traffic Governor</h3>
         </div>
       </div>
 
@@ -149,7 +153,7 @@
           <img src="images/brand-logos/tiktok.png" alt="TikTok Shop App Icon" width="64" height="64">
         </div>
         <div class="card-content">
-          <h3>TikTok Shop เชื่อมต่อ Live Sync API คำนวณส่วนลด &lt;50ms Real-Time</h3>
+          <h3 data-i18n="clients.tiktok">TikTok Shop เชื่อมต่อ Live Sync API คำนวณส่วนลด &lt;50ms Real-Time</h3>
         </div>
       </div>
 
@@ -162,7 +166,7 @@
           <img src="images/brand-logos/central.png" alt="Central Online App Icon" width="64" height="64">
         </div>
         <div class="card-content">
-          <h3>Central Online เชื่อมโยงสต็อก 80+ สาขาทั่วประเทศแบบไร้รอยต่อ</h3>
+          <h3 data-i18n="clients.central">Central Online เชื่อมโยงสต็อก 80+ สาขาทั่วประเทศแบบไร้รอยต่อ</h3>
         </div>
       </div>
 
@@ -175,7 +179,7 @@
           <img src="images/brand-logos/lotus.png" alt="Lotus's App Icon" width="64" height="64">
         </div>
         <div class="card-content">
-          <h3>Lotus's บริหารฐานสมาชิก 15M+ Members ด้วย Smart Coupon Engine</h3>
+          <h3 data-i18n="clients.lotus">Lotus's บริหารฐานสมาชิก 15M+ Members ด้วย Smart Coupon Engine</h3>
         </div>
       </div>
 
@@ -188,7 +192,7 @@
           <img src="images/brand-logos/line.png" alt="LINE Shopping App Icon" width="64" height="64">
         </div>
         <div class="card-content">
-          <h3>LINE Shopping ยกระดับ Chat-to-Pay ด้วยความสำเร็จ 99.8% Success Rate</h3>
+          <h3 data-i18n="clients.line">LINE Shopping ยกระดับ Chat-to-Pay ด้วยความสำเร็จ 99.8% Success Rate</h3>
         </div>
       </div>
 
@@ -201,7 +205,7 @@
           <img src="images/brand-logos/grab.png" alt="GrabMart App Icon" width="64" height="64">
         </div>
         <div class="card-content">
-          <h3>GrabMart กระจายคำสั่งซื้อจัดส่งด่วนภายใน 25 นาที ด้วยระบบ Auto-Dispatch</h3>
+          <h3 data-i18n="clients.grab">GrabMart กระจายคำสั่งซื้อจัดส่งด่วนภายใน 25 นาที ด้วยระบบ Auto-Dispatch</h3>
         </div>
       </div>
 
@@ -214,11 +218,11 @@
           <img src="images/brand-logos/agoda.png" alt="Agoda App Icon" width="64" height="64">
         </div>
         <div class="card-content">
-          <h3>Agoda รองรับชำระเงิน 40+ Currencies และ Reconciliation ข้ามประเทศ</h3>
+          <h3 data-i18n="clients.agoda">Agoda รองรับชำระเงิน 40+ Currencies และ Reconciliation ข้ามประเทศ</h3>
         </div>
       </div>
 
-      <!-- Set 2 (Duplicate for Seamless Infinite Marquee Loop) -->
+      <!-- Set 2 (Duplicate Loop) -->
       <div class="client-card" data-brand="shopee">
         <div class="card-meta">
           <span>MARKETPLACE</span>
@@ -228,7 +232,7 @@
           <img src="images/brand-logos/shopee.png" alt="Shopee App Icon" width="64" height="64">
         </div>
         <div class="card-content">
-          <h3>Shopee ประมวลผล 15M+ Order/Day ด้วย High-Volume Checkout Gateway</h3>
+          <h3 data-i18n="clients.shopee">Shopee ประมวลผล 15M+ Order/Day ด้วย High-Volume Checkout Gateway</h3>
         </div>
       </div>
 
@@ -241,7 +245,7 @@
           <img src="images/brand-logos/lazada.png" alt="Lazada App Icon" width="64" height="64">
         </div>
         <div class="card-content">
-          <h3>Lazada จัดการ 10M+ Active SKUs ด้วย Flash Sale Traffic Governor</h3>
+          <h3 data-i18n="clients.lazada">Lazada จัดการ 10M+ Active SKUs ด้วย Flash Sale Traffic Governor</h3>
         </div>
       </div>
 
@@ -254,7 +258,7 @@
           <img src="images/brand-logos/tiktok.png" alt="TikTok Shop App Icon" width="64" height="64">
         </div>
         <div class="card-content">
-          <h3>TikTok Shop เชื่อมต่อ Live Sync API คำนวณส่วนลด &lt;50ms Real-Time</h3>
+          <h3 data-i18n="clients.tiktok">TikTok Shop เชื่อมต่อ Live Sync API คำนวณส่วนลด &lt;50ms Real-Time</h3>
         </div>
       </div>
 
@@ -267,7 +271,7 @@
           <img src="images/brand-logos/central.png" alt="Central Online App Icon" width="64" height="64">
         </div>
         <div class="card-content">
-          <h3>Central Online เชื่อมโยงสต็อก 80+ สาขาทั่วประเทศแบบไร้รอยต่อ</h3>
+          <h3 data-i18n="clients.central">Central Online เชื่อมโยงสต็อก 80+ สาขาทั่วประเทศแบบไร้รอยต่อ</h3>
         </div>
       </div>
 
@@ -280,7 +284,7 @@
           <img src="images/brand-logos/lotus.png" alt="Lotus's App Icon" width="64" height="64">
         </div>
         <div class="card-content">
-          <h3>Lotus's บริหารฐานสมาชิก 15M+ Members ด้วย Smart Coupon Engine</h3>
+          <h3 data-i18n="clients.lotus">Lotus's บริหารฐานสมาชิก 15M+ Members ด้วย Smart Coupon Engine</h3>
         </div>
       </div>
 
@@ -293,7 +297,7 @@
           <img src="images/brand-logos/line.png" alt="LINE Shopping App Icon" width="64" height="64">
         </div>
         <div class="card-content">
-          <h3>LINE Shopping ยกระดับ Chat-to-Pay ด้วยความสำเร็จ 99.8% Success Rate</h3>
+          <h3 data-i18n="clients.line">LINE Shopping ยกระดับ Chat-to-Pay ด้วยความสำเร็จ 99.8% Success Rate</h3>
         </div>
       </div>
 
@@ -306,7 +310,7 @@
           <img src="images/brand-logos/grab.png" alt="GrabMart App Icon" width="64" height="64">
         </div>
         <div class="card-content">
-          <h3>GrabMart กระจายคำสั่งซื้อจัดส่งด่วนภายใน 25 นาที ด้วยระบบ Auto-Dispatch</h3>
+          <h3 data-i18n="clients.grab">GrabMart กระจายคำสั่งซื้อจัดส่งด่วนภายใน 25 นาที ด้วยระบบ Auto-Dispatch</h3>
         </div>
       </div>
 
@@ -319,11 +323,12 @@
           <img src="images/brand-logos/agoda.png" alt="Agoda App Icon" width="64" height="64">
         </div>
         <div class="card-content">
-          <h3>Agoda รองรับชำระเงิน 40+ Currencies และ Reconciliation ข้ามประเทศ</h3>
+          <h3 data-i18n="clients.agoda">Agoda รองรับชำระเงิน 40+ Currencies และ Reconciliation ข้ามประเทศ</h3>
         </div>
       </div>
     </div>
   </div>
+</section>
 
 <!-- Services Section -->
 <section class="section reveal" id="services">
@@ -331,25 +336,25 @@
     <div class="sec-head">
       <div class="sec-head-left">
         <span class="sec-num">02</span>
-        <h2 class="sec-title">บริการหลักของเรา</h2>
+        <h2 class="sec-title" data-i18n="services.title">บริการหลักของเรา</h2>
       </div>
-      <p class="sec-sub">โซลูชันทางเทคโนโลยีครบวงจรสำหรับการขายออนไลน์แบบไร้รอยต่อ</p>
+      <p class="sec-sub" data-i18n="services.sub">โซลูชันทางเทคโนโลยีครบวงจรสำหรับการขายออนไลน์แบบไร้รอยต่อ</p>
     </div>
     <div class="services">
       <div class="svc">
         <div class="svc-idx">SERVICE / 01</div>
-        <h3>สถาปัตยกรรม High-Scale Backend</h3>
-        <p>ออกแบบระบบหลังบ้าน Microservices ที่ขยายตัวได้อัตโนมัติ (Autoscaling) รองรับการเข้าชมพร้อมกันนับล้านคนในช่วง Mega Campaign</p>
+        <h3 data-i18n="services.s1Title">สถาปัตยกรรม High-Scale Backend</h3>
+        <p data-i18n="services.s1Desc">ออกแบบระบบหลังบ้าน Microservices ที่ขยายตัวได้อัตโนมัติ (Autoscaling) รองรับการเข้าชมพร้อมกันนับล้านคนในช่วง Mega Campaign</p>
       </div>
       <div class="svc">
         <div class="svc-idx">SERVICE / 02</div>
-        <h3>Payment Gateway Integration</h3>
-        <p>เชื่อมต่อระบบชำระเงินทุกรูปแบบ ทั้งบัตรเครดิต, PromptPay, E-Wallet, BNPL และระบบตรวจจับธุรกรรมทุจริตแบบเรียลไทม์</p>
+        <h3 data-i18n="services.s2Title">Payment Gateway Integration</h3>
+        <p data-i18n="services.s2Desc">เชื่อมต่อระบบชำระเงินทุกรูปแบบ ทั้งบัตรเครดิต, PromptPay, E-Wallet, BNPL และระบบตรวจจับธุรกรรมทุจริตแบบเรียลไทม์</p>
       </div>
       <div class="svc">
         <div class="svc-idx">SERVICE / 03</div>
-        <h3>Inventory & Order Hub</h3>
-        <p>ระบบติดตามคลังสินค้าและจัดการคำสั่งซื้อรวมศูนย์ เชื่อมโยงทุกช่องทางหน้าร้าน Marketplace และ Social Media เข้าด้วยกัน</p>
+        <h3 data-i18n="services.s3Title">Inventory &amp; Order Hub</h3>
+        <p data-i18n="services.s3Desc">ระบบติดตามคลังสินค้าและจัดการคำสั่งซื้อรวมศูนย์ เชื่อมโยงทุกช่องทางหน้าร้าน Marketplace และ Social Media เข้าด้วยกัน</p>
       </div>
     </div>
   </div>
@@ -359,12 +364,13 @@
 <section class="section reveal" id="stats">
   <div class="wrap">
     <div class="stats">
-      <div class="stat"><div class="n">50M+</div><div class="l">รายการคำสั่งซื้อต่อปี</div></div>
-      <div class="stat"><div class="n">99.99%</div><div class="l">ความเสถียรของระบบ (Uptime)</div></div>
-      <div class="stat"><div class="n">&lt; 100ms</div><div class="l">ความเร็วเฉลี่ยในการเช็คเอาต์</div></div>
-      <div class="stat"><div class="n">4</div><div class="l">วิศวกรผู้เชี่ยวชาญหลัก</div></div>
+      <div class="stat"><div class="n">50M+</div><div class="l" data-i18n="stats.s1Label">รายการคำสั่งซื้อต่อปี</div></div>
+      <div class="stat"><div class="n">99.99%</div><div class="l" data-i18n="stats.s2Label">ความเสถียรของระบบ (Uptime)</div></div>
+      <div class="stat"><div class="n">&lt; 100ms</div><div class="l" data-i18n="stats.s3Label">ความเร็วเฉลี่ยในการเช็คเอาต์</div></div>
+      <div class="stat"><div class="n">4</div><div class="l" data-i18n="stats.s4Label">วิศวกรผู้เชี่ยวชาญหลัก</div></div>
     </div>
-  </section>
+  </div>
+</section>
 
 <!-- Team Section -->
 <section class="section reveal" id="team">
@@ -372,43 +378,44 @@
     <div class="sec-head">
       <div class="sec-head-left">
         <span class="sec-num">03</span>
-        <h2 class="sec-title">ทีมวิศวกรของเรา</h2>
+        <h2 class="sec-title" data-i18n="team.title">ทีมวิศวกรของเรา</h2>
       </div>
-      <p class="sec-sub">คลิกที่รายชื่อเพื่อดูประวัติ ทักษะ และผลงานของสมาชิกแต่ละคน</p>
+      <p class="sec-sub" data-i18n="team.sub">คลิกที่รายชื่อเพื่อดูประวัติ ทักษะ และผลงานของสมาชิกแต่ละคน</p>
     </div>
     <div class="team">
       <a class="member" href="Member1.html">
         <span class="m-idx">MEMBER 01</span>
         <span class="m-arrow">↗</span>
-        <span class="m-name">สมาชิก คนที่ 1</span>
-        <span class="m-role">Backend Architect — วางสถาปัตยกรรมระบบ</span>
+        <span class="m-name">Natakron Sudthana</span>
+        <span class="m-role" data-i18n="team.m1Role">Backend Architect — วางสถาปัตยกรรมระบบ</span>
       </a>
       <a class="member" href="Member2.html">
         <span class="m-idx">MEMBER 02</span>
         <span class="m-arrow">↗</span>
         <span class="m-name">Thitirat Sirisawad</span>
-        <span class="m-role">UX/UI Designer — ออกแบบประสบการณ์ผู้ใช้และอินเทอร์เฟซ</span>
+        <span class="m-role" data-i18n="team.m2Role">UX/UI Designer — ออกแบบประสบการณ์ผู้ใช้และอินเทอร์เฟซ</span>
       </a>
       <a class="member" href="Member3.html">
         <span class="m-idx">MEMBER 03</span>
         <span class="m-arrow">↗</span>
         <span class="m-name">Sirawit Yuangkham</span>
-        <span class="m-role">Payment Systems — วางระบบชำระเงินและ Security</span>
+        <span class="m-role" data-i18n="team.m3Role">Payment Systems — วางระบบชำระเงินและ Security</span>
       </a>
       <a class="member" href="Member4.html">
         <span class="m-idx">MEMBER 04</span>
         <span class="m-arrow">↗</span>
         <span class="m-name">Farsai Pintakham</span>
-        <span class="m-role">DevOps &amp; Infrastructure — โครงสร้างพื้นฐานบน คลาวด์</span>
+        <span class="m-role" data-i18n="team.m4Role">DevOps &amp; Infrastructure — โครงสร้างพื้นฐานบน คลาวด์</span>
       </a>
     </div>
-  </footer>
+  </div>
+</section>
 
 <!-- CTA Section -->
 <section class="cta" id="contact">
   <div class="wrap">
-    <h2>พร้อมที่จะยกระดับระบบ <em>E-commerce</em> ของคุณแล้วหรือยัง?</h2>
-    <p>ปรึกษาทีมงาน CAMT Commerce เพื่อวางโครงสร้างระบบที่มั่นคงและขยายตัวได้จริง</p>
+    <h2 data-i18n="cta.title">พร้อมที่จะยกระดับระบบ <em>E-commerce</em> ของคุณแล้วหรือยัง?</h2>
+    <p data-i18n="cta.sub">ปรึกษาทีมงาน CAMT Commerce เพื่อวางโครงสร้างระบบที่มั่นคงและขยายตัวได้จริง</p>
     <a class="btn solid" href="mailto:hello@camtcommerce.dev">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
       hello@camtcommerce.dev
@@ -421,11 +428,12 @@
     <div class="brand">
       CAMT Commerce
     </div>
-    <small>© 2026 CAMT Commerce — High Performance E-Commerce Systems</small>
-    <a href="#hero" id="back-to-top">↑ กลับขึ้นด้านบน</a>
+    <small data-i18n="foot.copy">© 2026 CAMT Commerce — High Performance E-Commerce Systems</small>
+    <a href="#hero" id="back-to-top" data-i18n="foot.top">↑ กลับขึ้นด้านบน</a>
   </div>
 </footer>
 
+<script src="i18n.js"></script>
 <script>
 // Theme Switcher Logic
 const themeToggleBtn = document.getElementById('theme-toggle');

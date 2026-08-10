@@ -3,19 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Farsai Pintakham — CAMT Commerce</title>
+<meta name="description" content="Farsai Pintakham — UX/UI & Frontend Developer ที่ CAMT Commerce เชี่ยวชาญด้าน Figma, HTML/CSS, JavaScript และการออกแบบระบบส่วนหน้า">
+<title>Farsai Pintakham — UX/UI &amp; Frontend Developer · CAMT Commerce</title>
 <link rel="stylesheet" href="main.css">
 </head>
 <body>
 
+<!-- Header Navigation -->
 <header class="topbar">
   <div class="wrap">
     <a class="brand" href="Index.html">
       CAMT&nbsp;Commerce
-      <span class="brand-badge">// member profile</span>
+      <span class="brand-badge" data-i18n="nav.memberBadge">// member profile</span>
     </a>
     <div class="topbar-right">
-      <a class="back" href="Index.html">← กลับหน้าหลัก</a>
+      <a class="back" href="Index.html" data-i18n="nav.back">← กลับหน้าหลัก</a>
+      
+      <!-- Language Switcher Button -->
+      <button id="lang-toggle" class="lang-toggle-btn" aria-label="Toggle language">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        <span id="lang-text">TH / EN</span>
+      </button>
+
       <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light mode">
         <svg id="theme-icon" viewBox="0 0 24 24"></svg>
         <span id="theme-text">Theme</span>
@@ -24,73 +37,97 @@
   </div>
 </header>
 
+<!-- Hero Section -->
 <section class="hero">
   <div class="wrap">
-    <div class="eyebrow">MEMBER 04 / DEVOPS & INFRASTRUCTURE</div>
-    <h1>Farsai<br>Pintakham</h1>
-    <div class="role">DevOps & Infrastructure — ดูแลโครงสร้างพื้นฐานและการดีพลอย</div>
-    <p class="bio">รับผิดชอบโครงสร้างพื้นฐานบนคลาวด์ ระบบ CI/CD และการมอนิเตอร์ ทำให้ระบบพร้อมรองรับทราฟฟิกช่วงแคมเปญและกู้คืนได้รวดเร็วเมื่อเกิดปัญหา</p>
-    <div class="links">
-      <a class="chip" href="#" target="_blank" rel="noopener">GitHub ↗</a>
-      <a class="chip" href="#" target="_blank" rel="noopener">LinkedIn ↗</a>
-      <a class="chip" href="mailto:member4@camtcommerce.dev">Email ↗</a>
+    <div class="hero-container">
+      <div class="hero-left-box">
+        <div class="eyebrow" data-i18n="m4.eyebrow">
+          <span class="eyebrow-dot"></span>
+          MEMBER 04 / FRONTEND / UXUI
+        </div>
+        
+        <h1>
+          Farsai<br>
+          <em>Pintakham</em>
+        </h1>
+        
+        <div class="role" style="font-family:var(--mono); font-size:16px; color:var(--accent-purple); font-weight:600; margin:16px 0 12px;" data-i18n="m4.role">
+          UX/UI &amp; Frontend Developer — ออกแบบประสบการณ์ผู้ใช้และพัฒนาส่วนหน้าเว็บ
+        </div>
+        
+        <p class="lead" style="font-size:17px;" data-i18n="m4.bio">
+          รับผิดชอบการวิเคราะห์และออกแบบ User Experience (UX) ควบคู่กับการสร้าง User Interface (UI) ด้วย Figma รวมถึงนำดีไซน์มาเขียนโค้ด Frontend เพื่อให้ผู้ใช้งานได้รับประสบการณ์ที่ราบรื่นและสวยงาม
+        </p>
+        
+        <!-- Social / Contact Links -->
+        <div class="links">
+          <a class="chip" href="https://farpinta.me/" target="_blank" rel="noopener">Portfolio</a>
+          <a class="chip" href="https://www.linkedin.com/in/farsai-pintakham-315aa73aa/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="chip" href="mailto:member4@camtcommerce.dev">Email</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section m4-reveal">
+<!-- Section A: Skills & Expertise -->
+<section class="section reveal">
   <div class="wrap">
     <div class="sec-head">
       <div class="sec-head-left">
-        <span class="sec-num">A</span>
-        <h2 class="sec-title">ทักษะและความเชี่ยวชาญ</h2>
+        <span class="sec-num">01</span>
+        <h2 class="sec-title" data-i18n="m4.skillsTitle">ทักษะและความเชี่ยวชาญ</h2>
       </div>
     </div>
     <div class="skills">
-      <span class="skill">Docker / Kubernetes</span>
-      <span class="skill">AWS</span>
-      <span class="skill">Terraform</span>
+      <span class="skill">FIGMA</span>
+      <span class="skill">HTML / CSS</span>
+      <span class="skill">JAVASCRIPT</span>
       <span class="skill">CI/CD</span>
-      <span class="skill">Prometheus / Grafana</span>
-      <span class="skill">Linux</span>
+      <span class="skill">AI TOOLS</span>
+      <span class="skill">Problem Solving</span>
     </div>
   </div>
 </section>
 
-<section class="section m4-reveal">
+<!-- Section B: Featured Projects -->
+<section class="section reveal">
   <div class="wrap">
     <div class="sec-head">
       <div class="sec-head-left">
-        <span class="sec-num">B</span>
-        <h2 class="sec-title">ผลงานที่ผ่านมา</h2>
+        <span class="sec-num">02</span>
+        <h2 class="sec-title" data-i18n="m4.projectsTitle">ผลงานที่ผ่านมา</h2>
       </div>
     </div>
     <div class="proj">
       <div class="py">2025</div>
       <div><div class="pt">Shopee — Autoscaling Platform</div><div class="pd">ระบบขยายเซิร์ฟเวอร์อัตโนมัติรองรับแคมเปญ 11.11</div></div>
-      <div class="pc">DevOps Lead</div>
+      <div class="pc">UX UI</div>
     </div>
     <div class="proj">
       <div class="py">2024</div>
       <div><div class="pt">Big C — CI/CD Pipeline</div><div class="pd">วางระบบดีพลอยอัตโนมัติลดเวลาปล่อยฟีเจอร์</div></div>
-      <div class="pc">Infra Eng</div>
+      <div class="pc">FRONTEND</div>
     </div>
     <div class="proj">
       <div class="py">2023</div>
       <div><div class="pt">Central — Observability Stack</div><div class="pd">ระบบมอนิเตอร์และแจ้งเตือนครอบคลุมทุกบริการ</div></div>
-      <div class="pc">SRE</div>
+      <div class="pc">UXUI</div>
     </div>
   </div>
 </section>
 
-
+<!-- Footer -->
 <footer class="foot">
   <div class="wrap">
-    <small>© 2026 CAMT Commerce — Farsai Pintakham</small>
-    <a href="Index.html">← กลับไปดูทีมทั้งหมด</a>
+    <div class="brand">CAMT Commerce</div>
+    <small>© 2026 CAMT Commerce — Farsai Pintakham · Member 04 UX/UI &amp; Frontend Developer</small>
+    <a href="Index.html" data-i18n="nav.backTeam">← กลับไปดูทีมทั้งหมด</a>
   </div>
 </footer>
 
+<script src="i18n.js"></script>
 <script>
 // Theme Switcher Logic
 const themeToggleBtn = document.getElementById('theme-toggle');
@@ -131,6 +168,18 @@ themeToggleBtn.addEventListener('click', () => {
   currentTheme = currentTheme === 'light' ? 'dark' : 'light';
   applyTheme(currentTheme);
 });
+
+// Scroll Parallax Reveals
+const observerOptions = {threshold: 0.1, rootMargin: '0px 0px -40px 0px'};
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in-view');
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
 
 </body>

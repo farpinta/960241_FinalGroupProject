@@ -305,6 +305,33 @@ body{
 .theme-toggle-btn svg{width:16px;height:16px;fill:currentColor;transition:transform .5s ease}
 .theme-toggle-btn:hover svg{transform:rotate(360deg)}
 
+/* Language Switcher Button */
+.lang-toggle-btn{
+  background:rgba(255, 255, 255, 0.08);
+  border:1px solid var(--line-strong);
+  color:var(--ink);
+  padding:8px 14px;
+  border-radius:30px;
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-family:var(--mono);
+  font-size:12px;
+  font-weight:600;
+  transition:all .3s cubic-bezier(.34,1.56,.64,1);
+}
+.lang-toggle-btn:hover{
+  background:var(--accent-gradient);
+  color:#ffffff;
+  border-color:transparent;
+  transform:scale(1.04);
+  box-shadow:0 4px 14px var(--accent-glow);
+}
+.lang-toggle-btn svg{width:16px;height:16px;stroke:currentColor;transition:transform .5s ease}
+.lang-toggle-btn:hover svg{transform:rotate(180deg)}
+.lang-toggle-btn .lang-globe{font-size:14px;line-height:1}
+
 .back{font-family:var(--mono);font-size:13px;color:var(--ink);text-decoration:none;transition:.2s ease}
 .back:hover{color:var(--accent);text-decoration:underline}
 

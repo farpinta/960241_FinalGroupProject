@@ -3,38 +3,81 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>สมาชิก คนที่ 1 — CAMT Commerce</title>
-<link rel="stylesheet" href="member1.css">
+<meta name="description" content="Natakron Sudthana — Backend Architect ที่ CAMT Commerce เชี่ยวชาญด้าน System Design, Java / Spring Boot, Microservices และ PostgreSQL">
+<title>Natakron Sudthana — Backend Architect · CAMT Commerce</title>
+<link rel="stylesheet" href="main.css">
 </head>
 <body>
 
+<!-- Header Navigation -->
 <header class="topbar">
   <div class="wrap">
-    <a class="brand" href="Index.html">CAMT&nbsp;Commerce<span>// e-commerce systems</span></a>
-    <a class="back" href="Index.html">← กลับหน้าหลัก</a>
+    <a class="brand" href="Index.html">
+      CAMT&nbsp;Commerce
+      <span class="brand-badge" data-i18n="nav.memberBadge">// member profile</span>
+    </a>
+    <div class="topbar-right">
+      <a class="back" href="Index.html" data-i18n="nav.back">← กลับหน้าหลัก</a>
+      
+      <!-- Language Switcher Button -->
+      <button id="lang-toggle" class="lang-toggle-btn" aria-label="Toggle language">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        <span id="lang-text">TH / EN</span>
+      </button>
+
+      <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light mode">
+        <svg id="theme-icon" viewBox="0 0 24 24"></svg>
+        <span id="theme-text">Theme</span>
+      </button>
+    </div>
   </div>
 </header>
 
+<!-- Hero Section -->
 <section class="hero">
   <div class="wrap">
-    <div class="eyebrow">MEMBER 01 / BACKEND ARCHITECT</div>
-    <h1>สมาชิก<br>คนที่ 1</h1>
-    <div class="role">Backend Architect — วางสถาปัตยกรรมระบบและฐานข้อมูล</div>
-    <p class="bio">รับผิดชอบการออกแบบระบบหลังบ้านให้รองรับผู้ใช้จำนวนมาก ดูแลตั้งแต่โครงสร้างฐานข้อมูล การออกแบบ API ไปจนถึงการปรับจูนประสิทธิภาพในช่วงแคมเปญที่มีทราฟฟิกสูง</p>
-    <div class="links">
-      <a class="chip" href="https://github.com/natakron-oss" target="_blank" rel="noopener">GitHub ↗</a>
-      <a class="chip" href="https://prorio-eta.vercel.app/" target="_blank" rel="noopener">LinkedIn ↗</a>
-      <a class="chip" href="mailto:natakronmiku@gmail.com">Email ↗</a>
+    <div class="hero-container">
+      <div class="hero-left-box">
+        <div class="eyebrow" data-i18n="m1.eyebrow">
+          <span class="eyebrow-dot"></span>
+          MEMBER 01 / BACKEND ARCHITECT
+        </div>
+        
+        <h1>
+          Natakron<br>
+          <em>Sudthana</em>
+        </h1>
+        
+        <div class="role" style="font-family:var(--mono); font-size:16px; color:var(--accent-purple); font-weight:600; margin:16px 0 12px;" data-i18n="m1.role">
+          Backend Architect — วางสถาปัตยกรรมระบบและฐานข้อมูล
+        </div>
+        
+        <p class="lead" style="font-size:17px;" data-i18n="m1.bio">
+          รับผิดชอบการออกแบบระบบหลังบ้านให้รองรับผู้ใช้จำนวนมาก ดูแลตั้งแต่โครงสร้างฐานข้อมูล การออกแบบ API ไปจนถึงการปรับจูนประสิทธิภาพในช่วงแคมเปญที่มีทราฟฟิกสูง
+        </p>
+        
+        <!-- Social / Contact Links -->
+        <div class="links">
+          <a class="chip" href="https://github.com/natakron-oss" target="_blank" rel="noopener">GitHub</a>
+          <a class="chip" href="https://prorio-eta.vercel.app/" target="_blank" rel="noopener">Portfolio</a>
+          <a class="chip" href="mailto:natakronmiku@gmail.com">Email</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- Section A: Skills & Expertise -->
 <section class="section reveal">
   <div class="wrap">
     <div class="sec-head">
       <div class="sec-head-left">
-        <span class="sec-num">A</span>
-        <h2 class="sec-title">ทักษะและความเชี่ยวชาญ</h2>
+        <span class="sec-num">01</span>
+        <h2 class="sec-title" data-i18n="m1.skillsTitle">ทักษะและความเชี่ยวชาญ</h2>
       </div>
     </div>
     <div class="skills">
@@ -48,12 +91,13 @@
   </div>
 </section>
 
+<!-- Section B: Featured Projects -->
 <section class="section reveal">
   <div class="wrap">
     <div class="sec-head">
       <div class="sec-head-left">
-        <span class="sec-num">B</span>
-        <h2 class="sec-title">ผลงานที่ผ่านมา</h2>
+        <span class="sec-num">02</span>
+        <h2 class="sec-title" data-i18n="m1.projectsTitle">ผลงานที่ผ่านมา</h2>
       </div>
     </div>
     <div class="proj">
@@ -74,23 +118,67 @@
   </div>
 </section>
 
+<!-- Footer -->
 <footer class="foot">
   <div class="wrap">
-    <small>© 2026 CAMT Commerce</small>
-    <a href="Index.html">← กลับไปดูทีมทั้งหมด</a>
+    <div class="brand">CAMT Commerce</div>
+    <small>© 2026 CAMT Commerce — Natakron Sudthana · Member 01 Backend Architect</small>
+    <a href="Index.html" data-i18n="nav.backTeam">← กลับไปดูทีมทั้งหมด</a>
   </div>
 </footer>
 
+<script src="i18n.js"></script>
 <script>
-const observerOptions = {threshold: 0.1, rootMargin: '0px 0px -60px 0px'};
+// Theme Switcher Logic
+const themeToggleBtn = document.getElementById('theme-toggle');
+const themeIcon = document.getElementById('theme-icon');
+const themeText = document.getElementById('theme-text');
+
+const sunSvg = `<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>`;
+const moonSvg = `<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>`;
+
+function getInitialTheme() {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) return savedTheme;
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('theme', theme);
+  if (theme === 'dark') {
+    themeIcon.innerHTML = sunSvg;
+    themeIcon.setAttribute('stroke', 'currentColor');
+    themeIcon.setAttribute('stroke-width', '2');
+    themeIcon.setAttribute('fill', 'none');
+    themeText.textContent = 'Light Mode';
+  } else {
+    themeIcon.innerHTML = moonSvg;
+    themeIcon.setAttribute('stroke', 'currentColor');
+    themeIcon.setAttribute('stroke-width', '2');
+    themeIcon.setAttribute('fill', 'none');
+    themeText.textContent = 'Dark Mode';
+  }
+}
+
+let currentTheme = getInitialTheme();
+applyTheme(currentTheme);
+
+themeToggleBtn.addEventListener('click', () => {
+  currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+  applyTheme(currentTheme);
+});
+
+// Scroll Parallax Reveals
+const observerOptions = {threshold: 0.1, rootMargin: '0px 0px -40px 0px'};
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('in-view');
-      observer.unobserve(entry.target);
     }
   });
 }, observerOptions);
+
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
 
