@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Sirawit — วิศวกรระบบชำระเงิน (Payment Systems Engineer) ที่ CAMT Commerce เชี่ยวชาญด้านการเชื่อมต่อ Payment Gateway, การตรวจจับการทุจริต และการกระทบยอดรายการโอนเงิน">
-<title>Sirawit — ระบบชำระเงิน · CAMT Commerce</title>
+<meta name="description" content="Sirawit Yuangkham — วิศวกรระบบชำระเงิน (Payment Systems Engineer) ที่ CAMT Commerce เชี่ยวชาญด้านการเชื่อมต่อ Payment Gateway, การตรวจจับการทุจริต และการกระทบยอดรายการโอนเงิน">
+<title>Sirawit Yuangkham — ระบบชำระเงิน · CAMT Commerce</title>
 <link rel="stylesheet" href="main.css">
 </head>
 
@@ -15,10 +15,21 @@
   <div class="wrap">
     <a class="brand" href="Index.html">
       CAMT&nbsp;Commerce
-      <span class="brand-badge">// member profile</span>
+      <span class="brand-badge" data-i18n="nav.memberBadge">// member profile</span>
     </a>
     <div class="topbar-right">
-      <a class="back" href="Index.html">← กลับหน้าหลัก</a>
+      <a class="back" href="Index.html" data-i18n="nav.back">← กลับหน้าหลัก</a>
+      
+      <!-- Language Switcher Button -->
+      <button id="lang-toggle" class="lang-toggle-btn" aria-label="Toggle language">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        <span id="lang-text">TH / EN</span>
+      </button>
+
       <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light mode">
         <svg id="theme-icon" viewBox="0 0 24 24"></svg>
         <span id="theme-text">Theme</span>
@@ -32,7 +43,7 @@
   <div class="wrap">
     <div class="hero-container">
       <div class="hero-left-box">
-        <div class="eyebrow">
+        <div class="eyebrow" data-i18n="m3.eyebrow">
           <span class="eyebrow-dot"></span>
           MEMBER 03 / PAYMENT SYSTEMS ENGINEER
         </div>
@@ -42,18 +53,18 @@
           <em>Yuangkham</em>
         </h1>
         
-        <div class="role" style="font-family:var(--mono); font-size:16px; color:var(--accent-purple); font-weight:600; margin:16px 0 12px;">
+        <div class="role" style="font-family:var(--mono); font-size:16px; color:var(--accent-purple); font-weight:600; margin:16px 0 12px;" data-i18n="m3.role">
           Payment Systems — วางระบบชำระเงินและความปลอดภัย
         </div>
         
-        <p class="lead" style="font-size:17px;">
+        <p class="lead" style="font-size:17px;" data-i18n="m3.bio">
           ดูแลระบบชำระเงินและการเชื่อมต่อกับเกตเวย์ต่างๆ รวมถึงระบบตรวจจับการทุจริตและการกระทบยอดธุรกรรมให้ถูกต้องแม่นยำในทุกคำสั่งซื้อ รองรับการทำธุรกรรมความเร็วสูงระดับล้านรายการ
         </p>
         
         <!-- Social / Contact Links -->
         <div class="links">
-          <a class="chip" href="#" target="_blank" rel="noopener">GitHub</a>
-          <a class="chip" href="#" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="chip" href="https://github.com/Sirawit" target="_blank" rel="noopener">GitHub</a>
+          <a class="chip" href="https://iqsirawit.github.io/portfolio/" target="_blank" rel="noopener">Portfolio</a>
           <a class="chip" href="mailto:member3@camtcommerce.dev">Email</a>
         </div>
 
@@ -61,19 +72,19 @@
         <div class="profile-stats-grid">
           <div class="profile-stat-card">
             <div class="num">฿2.4B</div>
-            <div class="lbl">ยอดธุรกรรมรวมที่ประมวลผล</div>
+            <div class="lbl" data-i18n="m3.stat1Lbl">ยอดธุรกรรมรวมที่ประมวลผล</div>
           </div>
           <div class="profile-stat-card">
             <div class="num">7</div>
-            <div class="lbl">โปรเจกต์ที่สำเร็จ</div>
+            <div class="lbl" data-i18n="m3.stat2Lbl">โปรเจกต์ที่สำเร็จ</div>
           </div>
           <div class="profile-stat-card">
             <div class="num">99.97%</div>
-            <div class="lbl">ความเสถียรของระบบ (Uptime)</div>
+            <div class="lbl" data-i18n="m3.stat3Lbl">ความเสถียรของระบบ (Uptime)</div>
           </div>
           <div class="profile-stat-card">
             <div class="num">4</div>
-            <div class="lbl">Payment Gateways ที่เชื่อมต่อ</div>
+            <div class="lbl" data-i18n="m3.stat4Lbl">Payment Gateways ที่เชื่อมต่อ</div>
           </div>
         </div>
 
@@ -88,17 +99,17 @@
     <div class="sec-head">
       <div class="sec-head-left">
         <span class="sec-num">01</span>
-        <h2 class="sec-title">ทักษะและความเชี่ยวชาญหลัก</h2>
+        <h2 class="sec-title" data-i18n="m3.skillsTitle">ทักษะและความเชี่ยวชาญหลัก</h2>
       </div>
-      <p class="sec-sub">ความเชี่ยวชาญในการออกแบบและวางสถาปัตยกรรมระบบชำระเงินที่มั่นคง ปลอดภัย และเสถียร</p>
+      <p class="sec-sub" data-i18n="m3.skillsSub">ความเชี่ยวชาญในการออกแบบและวางสถาปัตยกรรมระบบชำระเงินที่มั่นคง ปลอดภัย และเสถียร</p>
     </div>
 
     <div class="skills-grid">
       <!-- Skill 1 -->
       <div class="skill-card">
         <span class="skill-card-code">SK / 01</span>
-        <h3 class="skill-card-title">Payment Gateway Integration</h3>
-        <p class="skill-card-desc">เชื่อมต่อ PromptPay, Omise, KBank Open API, Stripe พร้อมระบบสลับ Gateway อัตโนมัติเมื่อเกิดปัญหาขัดข้อง เพื่อให้ทำรายการซื้อขายได้ต่อเนื่อง</p>
+        <h3 class="skill-card-title" data-i18n="m3.sk1Title">Payment Gateway Integration</h3>
+        <p class="skill-card-desc" data-i18n="m3.sk1Desc">เชื่อมต่อ PromptPay, Omise, KBank Open API, Stripe พร้อมระบบสลับ Gateway อัตโนมัติเมื่อเกิดปัญหาขัดข้อง เพื่อให้ทำรายการซื้อขายได้ต่อเนื่อง</p>
         <div class="skill-card-tags">
           <span class="tag-chip">PromptPay</span>
           <span class="tag-chip">Omise</span>
@@ -110,8 +121,8 @@
       <!-- Skill 2 -->
       <div class="skill-card">
         <span class="skill-card-code">SK / 02</span>
-        <h3 class="skill-card-title">Fraud Detection &amp; Monitoring</h3>
-        <p class="skill-card-desc">พัฒนาระบบ Rule Engine และ ML Scoring สำหรับตรวจจับธุรกรรมผิดปกติแบบ Real-time ด้วย Kafka Streams ช่วยอายัดคำสั่งซื้อที่มีความเสี่ยง</p>
+        <h3 class="skill-card-title" data-i18n="m3.sk2Title">Fraud Detection &amp; Monitoring</h3>
+        <p class="skill-card-desc" data-i18n="m3.sk2Desc">พัฒนาระบบ Rule Engine และ ML Scoring สำหรับตรวจจับธุรกรรมผิดปกติแบบ Real-time ด้วย Kafka Streams ช่วยอายัดคำสั่งซื้อที่มีความเสี่ยง</p>
         <div class="skill-card-tags">
           <span class="tag-chip">Fraud Rule Engine</span>
           <span class="tag-chip">ML Scoring</span>
@@ -123,8 +134,8 @@
       <!-- Skill 3 -->
       <div class="skill-card">
         <span class="skill-card-code">SK / 03</span>
-        <h3 class="skill-card-title">Transaction Reconciliation</h3>
-        <p class="skill-card-desc">ระบบกระทบยอดเงินโอนและสอดคล้องยอดชำระประจำวันอัตโนมัติ ระหว่าง Gateway, ธนาคาร และระบบบัญชีหลังบ้านอย่างแม่นยำ</p>
+        <h3 class="skill-card-title" data-i18n="m3.sk3Title">Transaction Reconciliation</h3>
+        <p class="skill-card-desc" data-i18n="m3.sk3Desc">ระบบกระทบยอดเงินโอนและสอดคล้องยอดชำระประจำวันอัตโนมัติ ระหว่าง Gateway, ธนาคาร และระบบบัญชีหลังบ้านอย่างแม่นยำ</p>
         <div class="skill-card-tags">
           <span class="tag-chip">Reconciliation</span>
           <span class="tag-chip">Auto Matching</span>
@@ -136,8 +147,8 @@
       <!-- Skill 4 -->
       <div class="skill-card">
         <span class="skill-card-code">SK / 04</span>
-        <h3 class="skill-card-title">PCI-DSS Level 1 Compliance</h3>
-        <p class="skill-card-desc">ออกแบบระบบ Tokenisation, การเข้ารหัสข้อมูลบัตรเครดิต Vault Tokens และระบบ Audit Trail ตามมาตรฐานความปลอดภัยระดับ Level 1 PCI-DSS</p>
+        <h3 class="skill-card-title" data-i18n="m3.sk4Title">PCI-DSS Level 1 Compliance</h3>
+        <p class="skill-card-desc" data-i18n="m3.sk4Desc">ออกแบบระบบ Tokenisation, การเข้ารหัสข้อมูลบัตรเครดิต Vault Tokens และระบบ Audit Trail ตามมาตรฐานความปลอดภัยระดับ Level 1 PCI-DSS</p>
         <div class="skill-card-tags">
           <span class="tag-chip">PCI-DSS</span>
           <span class="tag-chip">Tokenisation</span>
@@ -149,8 +160,8 @@
       <!-- Skill 5 -->
       <div class="skill-card">
         <span class="skill-card-code">SK / 05</span>
-        <h3 class="skill-card-title">Event-Driven Architecture</h3>
-        <p class="skill-card-desc">ออกแบบการประมวลผลชำระเงินแบบ Async ผ่าน Apache Kafka เพื่อรองรับ Idempotency และ Exactly-once Processing ในช่วง Mega Campaign</p>
+        <h3 class="skill-card-title" data-i18n="m3.sk5Title">Event-Driven Architecture</h3>
+        <p class="skill-card-desc" data-i18n="m3.sk5Desc">ออกแบบการประมวลผลชำระเงินแบบ Async ผ่าน Apache Kafka เพื่อรองรับ Idempotency และ Exactly-once Processing ในช่วง Mega Campaign</p>
         <div class="skill-card-tags">
           <span class="tag-chip">Event-Driven</span>
           <span class="tag-chip">Apache Kafka</span>
@@ -162,8 +173,8 @@
       <!-- Skill 6 -->
       <div class="skill-card">
         <span class="skill-card-code">SK / 06</span>
-        <h3 class="skill-card-title">Backend &amp; Cloud Infrastructure</h3>
-        <p class="skill-card-desc">พัฒนา Microservices ด้วย Java / Kotlin, Spring Boot, REST + gRPC APIs และการปรับใช้ระบบบน AWS EKS ด้วย Terraform</p>
+        <h3 class="skill-card-title" data-i18n="m3.sk6Title">Backend &amp; Cloud Infrastructure</h3>
+        <p class="skill-card-desc" data-i18n="m3.sk6Desc">พัฒนา Microservices ด้วย Java / Kotlin, Spring Boot, REST + gRPC APIs และการปรับใช้ระบบบน AWS EKS ด้วย Terraform</p>
         <div class="skill-card-tags">
           <span class="tag-chip">Java / Kotlin</span>
           <span class="tag-chip">Spring Boot</span>
@@ -181,9 +192,9 @@
     <div class="sec-head">
       <div class="sec-head-left">
         <span class="sec-num">02</span>
-        <h2 class="sec-title">ผลงานที่ผ่านมาและเคสศึกษา</h2>
+        <h2 class="sec-title" data-i18n="m3.projectsTitle">ผลงานที่ผ่านมาและเคสศึกษา</h2>
       </div>
-      <p class="sec-sub">ผลงานสำคัญในการออกแบบและสร้างระบบชำระเงินความปลอดภัยสูง</p>
+      <p class="sec-sub" data-i18n="m3.projectsSub">ผลงานสำคัญในการออกแบบและสร้างระบบชำระเงินความปลอดภัยสูง</p>
     </div>
 
     <div class="timeline">
@@ -193,7 +204,7 @@
         <div class="tl-body">
           <div class="tl-client">Shopee Thailand</div>
           <h3 class="tl-project">Payment Orchestration Layer</h3>
-          <p class="tl-desc">นำทีมออกแบบและพัฒนาระบบกระจายการชำระเงิน (Payment Orchestration) เพื่อส่งต่อการทำรายการไปยัง Gateway ที่เหมาะสมที่สุดตามค่าธรรมเนียม ความเร็ว และความพร้อมใช้งาน ช่วยลดอัตราการชำระเงินล้มเหลวลงได้ 38% ในช่วงแคมเปญที่มีผู้ใช้งานหนาแน่น</p>
+          <p class="tl-desc" data-i18n="m3.p1Desc">นำทีมออกแบบและพัฒนาระบบกระจายการชำระเงิน (Payment Orchestration) เพื่อส่งต่อการทำรายการไปยัง Gateway ที่เหมาะสมที่สุดตามค่าธรรมเนียม ความเร็ว และความพร้อมใช้งาน ช่วยลดอัตราการชำระเงินล้มเหลวลงได้ 38% ในช่วงแคมเปญที่มีผู้ใช้งานหนาแน่น</p>
           <div class="tl-footer">
             <span class="role-badge">Payment Lead</span>
             <span class="tag-chip">Java / Kotlin</span>
@@ -210,7 +221,7 @@
         <div class="tl-body">
           <div class="tl-client">Lotus's</div>
           <h3 class="tl-project">E-Wallet &amp; Loyalty Integration</h3>
-          <p class="tl-desc">เชื่อมต่อ E-Wallet ของโลตัสเข้ากับระบบ PromptPay และระบบสะสมแต้มสมาชิก รองรับการชำระเงินและสะสมคะแนนได้ทันทีในการแตะครั้งเดียว มียอดเติมเงินเข้า E-Wallet รวมกว่า 600 ล้านบาทภายใน 6 เดือนแรกหลังเปิดตัว</p>
+          <p class="tl-desc" data-i18n="m3.p2Desc">เชื่อมต่อ E-Wallet ของโลตัสเข้ากับระบบ PromptPay และระบบสะสมแต้มสมาชิก รองรับการชำระเงินและสะสมคะแนนได้ทันทีในการแตะครั้งเดียว มียอดเติมเงินเข้า E-Wallet รวมกว่า 600 ล้านบาทภายใน 6 เดือนแรกหลังเปิดตัว</p>
           <div class="tl-footer">
             <span class="role-badge">Backend Dev</span>
             <span class="tag-chip">PromptPay API</span>
@@ -226,7 +237,7 @@
         <div class="tl-body">
           <div class="tl-client">Central Online</div>
           <h3 class="tl-project">PCI-DSS Level 1 Migration</h3>
-          <p class="tl-desc">วางโครงสร้าง Tokenisation Pipeline เปลี่ยนจากการเก็บข้อมูลบัตรเครดิตตรง ไปเป็นการใช้ Vault Tokens ส่งผลให้ได้รับรองมาตรฐาน PCI-DSS Level 1 ก่อนกำหนดการ และไม่พบอุบัติเหตุข้อมูลบัตรหลุดร่วงเลยนับตั้งแต่เปิดใช้งาน</p>
+          <p class="tl-desc" data-i18n="m3.p3Desc">วางโครงสร้าง Tokenisation Pipeline เปลี่ยนจากการเก็บข้อมูลบัตรเครดิตตรง ไปเป็นการใช้ Vault Tokens ส่งผลให้ได้รับรองมาตรฐาน PCI-DSS Level 1 ก่อนกำหนดการ และไม่พบอุบัติเหตุข้อมูลบัตรหลุดร่วงเลยนับตั้งแต่เปิดใช้งาน</p>
           <div class="tl-footer">
             <span class="role-badge">Security Eng</span>
             <span class="tag-chip">PCI-DSS</span>
@@ -242,7 +253,7 @@
         <div class="tl-body">
           <div class="tl-client">Big C Supercenter</div>
           <h3 class="tl-project">Fraud Monitoring System</h3>
-          <p class="tl-desc">สร้างระบบตรวจจับการทุจริตแบบ Real-time โดยใช้ Rule Engine ร่วมกับ โมเดล Gradient-Boosting แบบน้ำหนักเบา ระบบสามารถแจ้งเตือนรายการต้องสงสัยได้ภายในเวลาน้อยกว่า 50 ms และอายัดคำสั่งซื้อที่มีความเสี่ยงสูงให้อยู่ในการตรวจสอบของผู้ดูแล ช่วยลดการถูกปฏิเสธชำระเงิน (Chargebacks) ลงได้ถึง 62%</p>
+          <p class="tl-desc" data-i18n="m3.p4Desc">สร้างระบบตรวจจับการทุจริตแบบ Real-time โดยใช้ Rule Engine ร่วมกับ โมเดล Gradient-Boosting แบบน้ำหนักเบา ระบบสามารถแจ้งเตือนรายการต้องสงสัยได้ภายในเวลาน้อยกว่า 50 ms และอายัดคำสั่งซื้อที่มีความเสี่ยงสูงให้อยู่ในการตรวจสอบของผู้ดูแล ช่วยลดการถูกปฏิเสธชำระเงิน (Chargebacks) ลงได้ถึง 62%</p>
           <div class="tl-footer">
             <span class="role-badge">Security Eng</span>
             <span class="tag-chip">ML Scoring</span>
@@ -261,10 +272,10 @@
   <div class="wrap">
     <div class="portfolio-cta-card">
       <div class="eyebrow" style="margin-bottom:16px;">PORTFOLIO SHOWCASE</div>
-      <h2>สำรวจ <em>พอร์ตโฟลิโอฉบับเต็ม</em></h2>
-      <p>ดูรายละเอียดโปรเจกต์ งานทดลอง และผลงานส่วนตัวเพิ่มเติม — ตั้งแต่เครื่องมือการชำระเงิน Open-Source ไปจนถึงงานออกแบบอินเทอร์เฟซ</p>
+      <h2 data-i18n="m3.ctaTitle">สำรวจ <em>พอร์ตโฟลิโอฉบับเต็ม</em></h2>
+      <p data-i18n="m3.ctaSub">ดูรายละเอียดโปรเจกต์ งานทดลอง และผลงานส่วนตัวเพิ่มเติม — ตั้งแต่เครื่องมือการชำระเงิน Open-Source ไปจนถึงงานออกแบบอินเทอร์เฟซ</p>
       
-      <a class="btn solid" href="https://iqsirawit.github.io/portfolio/" target="_blank" rel="noopener" style="margin-top:8px;">
+      <a class="btn solid" href="https://iqsirawit.github.io/portfolio/" target="_blank" rel="noopener" style="margin-top:8px;" data-i18n="m3.ctaBtn">
         ดูโปรไฟล์เพิ่มเติม
       </a>
     </div>
@@ -275,11 +286,12 @@
 <footer class="foot">
   <div class="wrap">
     <div class="brand">CAMT Commerce</div>
-    <small>© 2026 CAMT Commerce — Sirawit · Member 03 ระบบชำระเงิน</small>
-    <a href="Index.html">← กลับไปดูทีมทั้งหมด</a>
+    <small>© 2026 CAMT Commerce — Sirawit Yuangkham · Member 03 Payment Systems</small>
+    <a href="Index.html" data-i18n="nav.backTeam">← กลับไปดูทีมทั้งหมด</a>
   </div>
 </footer>
 
+<script src="i18n.js"></script>
 <script>
 // Theme Switcher Logic
 const themeToggleBtn = document.getElementById('theme-toggle');
