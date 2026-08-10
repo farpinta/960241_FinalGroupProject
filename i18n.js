@@ -163,7 +163,7 @@ const translations = {
     // Hero Section (Index)
     'hero.eyebrow': 'ABOUT US / E-COMMERCE EXPERTS',
     'hero.meta': '2026 // SYSTEM ARCHITECTS',
-    'hero.h1': 'Architecting<br><em>High-Scale E-Commerce</em><br>Platforms for Millions of Users®',
+    'hero.h1': 'Architecting<br><em><span style="white-space:nowrap">High-Scale</span> <span style="white-space:nowrap">E-Commerce</span></em><br>Platforms for Millions of Users®',
     'hero.lead': 'Software engineers designing, building, and scaling high-performance online trading platforms for industry leaders — from checkout gateways to real-time inventory management.',
     'hero.btnWork': 'View Client Portfolio',
     'hero.btnContact': 'Free Consultation',
@@ -339,4 +339,34 @@ document.addEventListener('DOMContentLoaded', () => {
       applyLanguage(currentLang);
     });
   }
+
+  // Create & Inject Topbar Scroll Progress Indicator (Wix Showcase Style)
+  const topbar = document.querySelector('.topbar');
+  if (topbar && !document.getElementById('scroll-progress')) {
+    const progressBar = document.createElement('div');
+    progressBar.id = 'scroll-progress';
+    progressBar.className = 'scroll-progress-bar';
+    topbar.appendChild(progressBar);
+  }
+
+  window.addEventListener('scroll', () => {
+    const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+    const progressBar = document.getElementById('scroll-progress');
+    if (progressBar) {
+      progressBar.style.width = scrolled + '%';
+    }
+  }, { passive: true });
+
+  // Universal Intersection Observer for Scroll Reveals
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 });

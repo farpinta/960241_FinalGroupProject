@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Prompt:wght@300;400;500;600;700&family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 /* ==========================================================================
    Pure Cyber Purple Design System & Enterprise Aesthetics
@@ -89,13 +89,24 @@
   --agoda-bg: rgba(59, 130, 246, 0.18);
   --agoda-border: rgba(59, 130, 246, 0.35);
 
-  /* Fonts */
-  --display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
-  --body: 'IBM Plex Sans Thai', -apple-system, BlinkMacSystemFont, sans-serif;
-  --mono: 'IBM Plex Mono', monospace;
+  /* Fonts - Enterprise Formal Typography System */
+  --display: 'Prompt', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --body: 'IBM Plex Sans Thai', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --mono: 'JetBrains Mono', 'IBM Plex Mono', monospace;
 
   /* Smooth Theme Transition */
   --theme-transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Language-Specific Formal Typography Rules */
+:root[lang="th"], [lang="th"] {
+  --display: 'Prompt', 'IBM Plex Sans Thai', sans-serif;
+  --body: 'IBM Plex Sans Thai', 'Prompt', sans-serif;
+}
+
+:root[lang="en"], [lang="en"] {
+  --display: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 /* ==========================================================================
@@ -207,6 +218,17 @@ body{
   backdrop-filter:blur(24px);
   -webkit-backdrop-filter:blur(24px);
   transition:var(--theme-transition);
+}
+.scroll-progress-bar{
+  position:absolute;
+  left:0;
+  bottom:0;
+  height:2.5px;
+  width:0%;
+  background:var(--accent-gradient);
+  box-shadow:0 0 12px var(--accent-glow-strong);
+  z-index:101;
+  transition:width .15s ease-out;
 }
 .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:80px}
 
@@ -393,9 +415,11 @@ body{
 .eyebrow-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);display:inline-block;box-shadow:0 0 10px var(--accent)}
 
 .hero h1{
-  font-family:var(--display);font-weight:800;font-size:clamp(44px,7.5vw,88px);
-  line-height:1.04;letter-spacing:-.03em;
+  font-family:var(--display);font-weight:800;font-size:clamp(36px,5.2vw,70px);
+  line-height:1.12;letter-spacing:-.03em;
   color:var(--ink);
+  word-break:keep-all;
+  overflow-wrap:break-word;
 }
 .hero h1 em{
   font-style:normal;display:inline-block;
@@ -559,12 +583,13 @@ body{
 /* ==========================================================================
    Section Layouts
    ========================================================================== */
-.section{border-bottom:1px solid var(--line);padding:96px 0;transition:var(--theme-transition)}
+.section{border-bottom:1px solid var(--line);padding:120px 0;transition:var(--theme-transition)}
 .section.reveal{
   opacity:0;
-  transform:translateY(40px) scale(0.98);
-  filter:blur(6px);
-  transition:opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), filter 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  transform:translateY(48px) scale(0.96);
+  filter:blur(8px);
+  transition:opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1), filter 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change:transform, opacity, filter;
 }
 .section.reveal.in-view{
   opacity:1;
@@ -572,7 +597,7 @@ body{
   filter:blur(0px);
 }
 
-.sec-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;margin-bottom:52px}
+.sec-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:64px}
 .sec-head-left{display:flex;align-items:baseline;gap:18px}
 .sec-num{
   font-family:var(--mono);font-size:13px;color:var(--accent-purple);
